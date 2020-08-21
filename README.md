@@ -32,7 +32,7 @@ open src/settings.py in your editor.
 
 under INSTALLED_APPS list add your app name with qoutes and ending with comma
 
-example:
+# example:
     INSTALLED_APPS = [
 
     ...
