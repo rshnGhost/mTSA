@@ -49,14 +49,14 @@ open src/urls.py in your editor.
 from myapp import urls
 
 # include your app urls
-urlpatterns = [
+    urlpatterns = [
 
-...
+    ...
 
-url(r'^myapp/', include('myapp.urls')),
+    url(r'^myapp/', include('myapp.urls')),
 
-...
+    ...
 
-]
+    ]
 
 Enjoy :)
