@@ -2,7 +2,8 @@
 A simple django project which should be exended to future website as needed.
 
 ## Requirements
-Python 3.7.2
+Chocolatey (Installation Code avaliable)
+Python 3.8.5 (One click Install file avaliable)
 
 ## Installation (Windows)
 # Install Chocolatey (should have internet connection) (skip if Installed)
