@@ -34,12 +34,9 @@ under INSTALLED_APPS list add your app name with qoutes and ending with comma
 
 example:
     INSTALLED_APPS = [
-    
-        ...
-        
+    ...
         'myapp',
-        
-        ...
+    ...
         
     ]
 
