@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+	{% block title %}
+		{{ phone.name }} | {{ block.super }}
+	{% endblock title %}
+
+{% block content %}
+	<div class="row">
+			<div class="col-lg-4">
+				<h1>{{ phone.name }}</h1>
+				<div id="slideshow">
+					<div class="active">
+						<img width="300" height="375"
+						alt="Picture of Mobile" src='{{phone.picture.url}}'
+						align="left" border="4"/>
+					</div>{% if img %}{% for img in img %}
+					<div>
+						<img width="300" height="375"
+						alt="Picture of Mobile" src='{{img.picture.url}}'
+						align="left" border="4"/>
+					</div>{% endfor %}{% endif %}
+				</div>
+			</div>
+			<div class="col-md-4">
+				<!--<form name="Toggle" action="">
+					<input type="radio" name="R1" id="pr" />Present
+					<input type="radio" name="R1" id="pa" checked="checked "/>Past
+				</form>-->
+				<a href="/getdata/{{ phone.modelNo }}/data" > Show Data Achived</a>
+				<div class="row"><div class="col-lg-6">Positive </div><div class="col-lg-1">{{ data.pt }}</div></div>
+				<!--tr><td colspan="2">{{ data.ptweets }}</td></tr-->
+				<div class="row"><div class="col-lg-6">Negative </div><div class="col-lg-1">{{ data.nt }}</div></div>
+				<!--tr><td colspan="2">{{ data.ntweets }}</td></tr-->
+				<div class="row"><div class="col-lg-6">Neutral </div><div class="col-md-1">{{ data.net }}</div></div>
+				<div class="row"><div class="col-lg-6">Cpu </div><div class="col-md-1">{{ bench.cpu }}</div></div>
+				<div class="row"><div class="col-lg-6">Unix </div><div class="col-md-1">{{ bench.ux }}</div></div>
+				<div class="row"><div class="col-lg-6">Device Disk </div><div class="col-md-1">{{ bench.ddd }}</div></div>
+				<hr color="red">
+				<div class="row"><div class="col-lg-6">Total </div><div class="col-md-1">{{ bench.total }}</div></div>
+				<hr color="red">
+			</div>
+		</div>
+
+		<div class="row"><div class="col-lg-6">Name</div><div class="col-lg-6">{{ phone.name }}</div></div>
+		<div class="row"><div class="col-lg-6">Model Number</div><div class="col-lg-6">{{ phone.modelNo }}</div></div>
+		<div class="row"><div class="col-lg-6">Network Type</div><div class="col-lg-6">{{ phone.network }}</div></div>
+		<div class="row"><div class="col-lg-6">Launch Date</div><div class="col-lg-6">{{ phone.launch }}</div></div>
+		<div class="row"><div class="col-lg-6">Body</div><div class="col-lg-6">{{ phone.body }}</div></div>
+		<div class="row"><div class="col-lg-6">Display</div><div class="col-lg-6">{{ phone.display }}</div></div>
+		<div class="row"><div class="col-lg-6">Platform</div><div class="col-lg-6">{{ phone.platform }}</div></div>
+		<div class="row"><div class="col-lg-6">Memory</div><div class="col-lg-6">{{ phone.memory }}</div></div>
+		<div class="row"><div class="col-lg-6">Camera</div><div class="col-lg-6">{{ phone.camera }}</div></div>
+		<div class="row"><div class="col-lg-6">GPU</div><div class="col-lg-6">{{ phone.gpu }}</div></div>
+		<div class="row"><div class="col-lg-6">Dimension</div><div class="col-lg-6">{{ phone.dimension }}</div></div>
+		<div class="row"><div class="col-lg-6">Battery</div><div class="col-lg-6">{{ phone.battery }}</div></div>
+		<div class="row"><div class="col-lg-6">Price</div><div class="col-lg-6">{{ phone.price }} INR</div></div>
+{% endblock %}

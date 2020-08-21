@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<table id="contentTable">
+		<tr>
+			<td id="contentLeftHome">
+			<div id="mainContent">
+				<h1>Welcome, {{ user.username }}</h1>
+                <h1 align="center">{{ data.name }}</h1>
+						<div class="list">
+						<div class="row"><div class="col-lg-6">Positive: </div><div class="col-lg-6">{{ bench.pt }}</div></div>
+						<main role="main" class="container">
+												{% for pt in pTweet %}
+														<div class="alert alert-success">
+																<div class="row"><div class="col">{{ pt.text }}</div></div>
+														</div>
+												{% endfor %}
+							</main>
+					    <div class="row"><div class="col-lg-6">Negative: </div><div class="col-lg-6">{{ bench.nt }}</div></div>
+												{% for nt in nTweet %}
+												<main role="main" class="container">
+																		{% for pt in pTweet %}
+																				<div class="alert alert-warning">
+																						<div class="row"><div class="col">{{ nt.text }}</div></div>
+																				</div>
+																		{% endfor %}
+													</main>
+												{% endfor %}
+						</div>
+
+
+{% endblock %}

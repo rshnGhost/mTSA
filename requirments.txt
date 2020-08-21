@@ -1,0 +1,5 @@
+Django==2.2.1
+django-crispy-forms==1.7.2
+django-extensions==2.1.7
+django-mathfilters==0.4.0
+django-registration-redux==2.6
