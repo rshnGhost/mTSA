@@ -1,4 +1,3 @@
-start-process PowerShell -verb runas
 if (!$env:ChocolateyInstall) {
   Write-Warning "The ChocolateyInstall environment variable was not found. `n Chocolatey is not detected as installed. Nothing to do"
   return
