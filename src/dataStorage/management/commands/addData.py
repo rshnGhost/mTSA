@@ -23,9 +23,39 @@ class Command(BaseCommand):
         key = options['key']
         android = processBench("android")
         ios = processBench("ios")
-        #print(android)
-        #for android in eval(str(android)):
-        #    print("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s"%(android.no,android.name,android.ram,android.cpu,android.gpu,android.mem,android.ux,android.total))
+        #print(android.dataBench)
+        for dataIn in android.dataBench:
+            #print(android.dataBench.get(dataIn).get('name'))
+            try:
+                dataAndroid = phoneBench.objects.create(
+                    device = android.dataBench.get(dataIn).get('name'),
+                	modelNo = android.dataBench.get(dataIn).get('name'),
+                	ram = android.dataBench.get(dataIn).get('ram'),
+                	cpu = android.dataBench.get(dataIn).get('cpu'),
+                	ux = android.dataBench.get(dataIn).get('ux'),
+                	ddd = android.dataBench.get(dataIn).get('mem'),
+                	total = android.dataBench.get(dataIn).get('total')
+                )
+                dataAndroid.save()
+            except:
+                print("error")
+                pass
+        for dataIn in ios.dataBench:
+            #print(ios.dataBench.get(dataIn).get('total'))
+            try:
+                dataIos = phoneBench.objects.create(
+                    device = ios.dataBench.get(dataIn).get('name'),
+                	modelNo = ios.dataBench.get(dataIn).get('name'),
+                	ram = ios.dataBench.get(dataIn).get('ram'),
+                	cpu = ios.dataBench.get(dataIn).get('cpu'),
+                	ux = ios.dataBench.get(dataIn).get('ux'),
+                	ddd = ios.dataBench.get(dataIn).get('mem'),
+                	total = ios.dataBench.get(dataIn).get('total')
+                )
+                dataIos.save()
+            except:
+                print("error[ios]")
+                pass
         cacheObject = cache.objects.filter(satuts = False)
         if key == "selected":
             for object in cacheObject:
