@@ -27,6 +27,7 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
 #CREATE YOUR TABLES HERE
 
 class phoneBench(models.Model):
+    month = models.CharField(max_length=140 ,unique=False)
     device = models.CharField(max_length=250)
     modelNo = models.CharField(max_length=250, unique=True)
     ram = models.CharField(max_length=250)

@@ -21,16 +21,17 @@ class Command(BaseCommand):
         #parser.add_argument('name', nargs='+', type=str)
 
     def handle(self, *args, **options):
-        #r = requests.get("http://www.antutu.com/en/ranking/rank1.htm")
+
+        r = requests.get("http://www.antutu.com/en/ranking/rank1.htm")
         #soup = BeautifulSoup(open("C:\\Users\\user\\Desktop\\autoProject\\mTSA-master\\android.html","r",encoding='utf-8'), "html.parser")
-        r = requests.get("https://www.antutu.com/en/ranking/ios1.htm")
+        #r = requests.get("https://www.antutu.com/en/ranking/ios1.htm")
         #soup = BeautifulSoup(open("C:\\Users\\user\\Desktop\\autoProject\\mTSA-master\\ios.html","r",encoding='utf-8'), "html.parser")
         soup = BeautifulSoup(r.content, 'html.parser')
         soup.prettify()
         content = soup.find('div', attrs={"style":"float: right;color: #999999;margin-top: 30px;margin-right: 35px;"})
         antutuObj = antutu.objects.last()
-        #print(str(content))
         month = re.sub("\*","",str(content.text))
+        #print(re.sub("\*","",str(content.text)))
         key = options['key']
         if(antutuObj.month != month):
             try:
@@ -53,11 +54,10 @@ class Command(BaseCommand):
                 pass
             #print(android.dataBench)
             for dataIn in android.dataBench:
-                print(">"+android.dataBench.get(dataIn).get('name').strip()+"<")
+                #print(android.dataBench.get(dataIn).get('name'))
                 try:
                     dataAndroid = phoneBench.objects.create(
-                        month = month,
-                        device = android.dataBench.get(dataIn).get('name').strip(),
+                        device = android.dataBench.get(dataIn).get('name'),
                     	modelNo = re.sub(" ","",str(android.dataBench.get(dataIn).get('name'))),
                     	ram = android.dataBench.get(dataIn).get('ram'),
                     	cpu = android.dataBench.get(dataIn).get('cpu'),
@@ -74,8 +74,7 @@ class Command(BaseCommand):
                 #print(ios.dataBench.get(dataIn).get('total'))
                 try:
                     dataIos = phoneBench.objects.create(
-                        month = month,
-                        device = ios.dataBench.get(dataIn).get('name').strip(),
+                        device = ios.dataBench.get(dataIn).get('name'),
                     	modelNo = re.sub(" ","",str(ios.dataBench.get(dataIn).get('name'))),
                     	ram = ios.dataBench.get(dataIn).get('ram'),
                     	cpu = ios.dataBench.get(dataIn).get('cpu'),
@@ -91,13 +90,7 @@ class Command(BaseCommand):
         cacheObject = cache.objects.filter(satuts = False)
         if key == "selected":
             for object in cacheObject:
-                try:
-                    pBObj = phoneBench.objects.filter(device = object.name)
-                    if pBObj.count() == 1:
-                        print('%s --> %s' % (object.id, object.name))
-                except:
-                    print("error[phoneBench]")
-                    pass
+                print('%s --> %s' % (object.id, object.name))
             id = input("Select an ID : ")
             cacheObject = cache.objects.filter(satuts = False, id = id)
         for object in cacheObject:
@@ -183,8 +176,7 @@ class Command(BaseCommand):
                 	gpu = finalData.get('Platform').get('GPU'),
                 	dimension = finalData.get('Display').get('Size'),
                 	battery = finalData.get('Battery').get('Charging'),
-                	price = 1000,#finalData.get('Misc').get('Price'),
-                    picture = finalData.get('name')+"/"+finalData.get('name')+"[1].jpg"#"OnePlus8Pro/OnePlus8Pro[1].jpg"
+                	price = finalData.get('Misc').get('Price'),
                 )
                 pDObject.save()
             except:
@@ -195,7 +187,7 @@ class Command(BaseCommand):
             i = 0
             for ilink in finalData.get('image').values():
     		    #print(ilink)
-                path = mname
+                path = ".\\"+mname
                 outfolder=os.path.join(PWD, path)
                 if not os.path.exists(outfolder):
                     os.makedirs(outfolder)
@@ -208,12 +200,12 @@ class Command(BaseCommand):
                 with open(outpath,'wb') as f:
                     shutil.copyfileobj(r.raw, f)
                 iObject = phoneImg.objects.create(
-                    modelNo = mname,
-                	picture = mname+"/"+filename,
+                modelNo = mname,
+            	picture = mname+"/"+filename,
                 )
                 iObject.save()
             ###
-            '''pBenchObject = phoneBench.objects.filter(device = object.name)
+            pBenchObject = phoneBench.objects.filter(device = object.name)
             if pBenchObject.count() == 0:
                 pass
             else:
@@ -245,8 +237,7 @@ class Command(BaseCommand):
                     pObject.save()
                 except:
                     print("error[phoneBench]")
-                    pass'''
-            detail = object.name
+                    pass
             t = cache.objects.get(name = object.name)
             t.satuts = True
             t.tag = mname#re.sub(" ","",str(detail[0])),
