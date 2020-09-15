@@ -36,9 +36,9 @@ class phoneBench(models.Model):
     mem  = models.IntegerField(null=True)
     ux  = models.IntegerField(null=True)
     total  = models.IntegerField(null=True)
-    nt = models.IntegerField(null=True)
-    net = models.IntegerField(null=True)
-    pt = models.IntegerField(null=True)
+    nt = models.IntegerField(default=0)
+    net = models.IntegerField(default=0)
+    pt = models.IntegerField(default=0)
 
     def __str__(self):
         return '%s' % self.device

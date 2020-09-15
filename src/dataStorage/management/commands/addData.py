@@ -102,116 +102,143 @@ class Command(BaseCommand):
             cacheObject = cache.objects.filter(satuts = False, id = id)
         for object in cacheObject:
             ####
-            try:
-                finalData = processWData(object.name)
-            except:
-                print("error[processWData]")
-                pass
-            finalData = (finalData.dataWP)
-            name  = finalData.get('name')
-            print(finalData)
-            try:
-                pWObject = phoneWeb.objects.create(
-                	name  = finalData.get('name'),
-                	link = finalData.get('link'),
-                	NetworkTechnology = finalData.get('Network').get('Technology'),
-                	Network2Gbands = finalData.get('Network').get('2G bands'),
-                	Network3Gbands = finalData.get('Network').get('3G bands'),
-                	Network4Gbands = finalData.get('Network').get('4G bands'),
-                	NetworkSpeed = finalData.get('Network').get('Speed'),
-                	LaunchAnnounced = finalData.get('Launch').get('Announced'),
-                	LaunchStatus = finalData.get('Launch').get('Status'),
-                	BodyDimensions = finalData.get('Body').get('Dimensions'),
-                	BodyWeight = finalData.get('Body').get('Weight'),
-                	BodyBuild = finalData.get('Body').get('Build'),
-                	BodySIM = finalData.get('Body').get('SIM'),
-                	DisplayType = finalData.get('Display').get('Type'),
-                	DisplaySize = finalData.get('Display').get('Size'),
-                	DisplayResolution = finalData.get('Display').get('Resolution'),
-                	DisplayOption = finalData.get('Display').get('Option'),
-                	PlatformOS = finalData.get('Platform').get('OS'),
-                	PlatformChipset = finalData.get('Platform').get('Chipset'),
-                	PlatformCPU = finalData.get('Platform').get('CPU'),
-                	PlatformGPU = finalData.get('Platform').get('GPU'),
-                	MemoryCardslot = finalData.get('Memory').get('Card slot'),
-                	MemoryInternal = finalData.get('Memory').get('Internal'),
-                	MemoryOption = finalData.get('Memory').get('Option'),
-                	MainCameraTriple = finalData.get('Main Camera').get('Triple'),
-                	MainCameraFeatures = finalData.get('Main Camera').get('Features'),
-                	MainCameraVideo = finalData.get('Main Camera').get('Video'),
-                	SelfiecameraSingle = finalData.get('Selfie camera').get('Single'),
-                	SelfiecameraFeatures = finalData.get('Selfie camera').get('Features'),
-                	SelfiecameraVideo = finalData.get('Selfie camera').get('Video'),
-                	SoundLoudspeaker  = finalData.get('Sound').get('Loudspeaker '),
-                	Sound35mmjack  = finalData.get('Sound').get('3.5mm jack '),
-                	CommsWLAN = finalData.get('Comms').get('WLAN'),
-                	CommsBluetooth = finalData.get('Comms').get('Bluetooth'),
-                	CommsGPS = finalData.get('Comms').get('GPS'),
-                	CommsRadio = finalData.get('Comms').get('Radio'),
-                	CommsUSB = finalData.get('Comms').get('USB'),
-                	FeaturesSensors = finalData.get('Features').get('Sensors'),
-                	BatteryOption = finalData.get('Battery').get('Option'),
-                	BatteryCharging = finalData.get('Battery').get('Charging'),
-                	MiscColors = finalData.get('Misc').get('Colors'),
-                	MiscModels = finalData.get('Misc').get('Models'),
-                	MiscSAR = finalData.get('Misc').get('SAR'),
-                	MiscSAREU = finalData.get('Misc').get('SAR EU'),
-                	MiscPrice = finalData.get('Misc').get('Price'),
-                	TestsPerformance = finalData.get('Tests').get('Performance'),
-                	TestsDisplay = finalData.get('Tests').get('Display'),
-                	TestsCamera = finalData.get('Tests').get('Camera'),
-                	TestsAudioquality = finalData.get('Tests').get('Audio quality'),
-                	TestsBatterylife = finalData.get('Tests').get('Battery life')
-                )
-                pWObject.save()
-            except:
-                print("error[phoneWeb]")
-                pass
+            mname = re.sub(" ","",str(object.name))
+            pWObject = phoneWeb.objects.filter(name = object.name)
+            if pWObject.count() != 0:
+                try:
+                    finalData = processWData(object.name)
+                except:
+                    print("error[processWData]")
+                    pass
+                finalData = (finalData.dataWP)
+                name  = finalData.get('name')
+                print(finalData)
+                try:
+                    pWObject = phoneWeb.objects.create(
+                    	name  = finalData.get('name'),
+                    	link = finalData.get('link'),
+                    	NetworkTechnology = finalData.get('Network').get('Technology'),
+                    	Network2Gbands = finalData.get('Network').get('2G bands'),
+                    	Network3Gbands = finalData.get('Network').get('3G bands'),
+                    	Network4Gbands = finalData.get('Network').get('4G bands'),
+                    	NetworkSpeed = finalData.get('Network').get('Speed'),
+                    	LaunchAnnounced = finalData.get('Launch').get('Announced'),
+                    	LaunchStatus = finalData.get('Launch').get('Status'),
+                    	BodyDimensions = finalData.get('Body').get('Dimensions'),
+                    	BodyWeight = finalData.get('Body').get('Weight'),
+                    	BodyBuild = finalData.get('Body').get('Build'),
+                    	BodySIM = finalData.get('Body').get('SIM'),
+                    	DisplayType = finalData.get('Display').get('Type'),
+                    	DisplaySize = finalData.get('Display').get('Size'),
+                    	DisplayResolution = finalData.get('Display').get('Resolution'),
+                    	DisplayOption = finalData.get('Display').get('Option'),
+                    	PlatformOS = finalData.get('Platform').get('OS'),
+                    	PlatformChipset = finalData.get('Platform').get('Chipset'),
+                    	PlatformCPU = finalData.get('Platform').get('CPU'),
+                    	PlatformGPU = finalData.get('Platform').get('GPU'),
+                    	MemoryCardslot = finalData.get('Memory').get('Card slot'),
+                    	MemoryInternal = finalData.get('Memory').get('Internal'),
+                    	MemoryOption = finalData.get('Memory').get('Option'),
+                    	MainCameraTriple = finalData.get('Main Camera').get('Triple'),
+                    	MainCameraFeatures = finalData.get('Main Camera').get('Features'),
+                    	MainCameraVideo = finalData.get('Main Camera').get('Video'),
+                    	SelfiecameraSingle = finalData.get('Selfie camera').get('Single'),
+                    	SelfiecameraFeatures = finalData.get('Selfie camera').get('Features'),
+                    	SelfiecameraVideo = finalData.get('Selfie camera').get('Video'),
+                    	SoundLoudspeaker  = finalData.get('Sound').get('Loudspeaker '),
+                    	Sound35mmjack  = finalData.get('Sound').get('3.5mm jack '),
+                    	CommsWLAN = finalData.get('Comms').get('WLAN'),
+                    	CommsBluetooth = finalData.get('Comms').get('Bluetooth'),
+                    	CommsGPS = finalData.get('Comms').get('GPS'),
+                    	CommsRadio = finalData.get('Comms').get('Radio'),
+                    	CommsUSB = finalData.get('Comms').get('USB'),
+                    	FeaturesSensors = finalData.get('Features').get('Sensors'),
+                    	BatteryOption = finalData.get('Battery').get('Option'),
+                    	BatteryCharging = finalData.get('Battery').get('Charging'),
+                    	MiscColors = finalData.get('Misc').get('Colors'),
+                    	MiscModels = finalData.get('Misc').get('Models'),
+                    	MiscSAR = finalData.get('Misc').get('SAR'),
+                    	MiscSAREU = finalData.get('Misc').get('SAR EU'),
+                    	MiscPrice = finalData.get('Misc').get('Price'),
+                    	TestsPerformance = finalData.get('Tests').get('Performance'),
+                    	TestsDisplay = finalData.get('Tests').get('Display'),
+                    	TestsCamera = finalData.get('Tests').get('Camera'),
+                    	TestsAudioquality = finalData.get('Tests').get('Audio quality'),
+                    	TestsBatterylife = finalData.get('Tests').get('Battery life')
+                    )
+                    pWObject.save()
+                    i = 0
+                    for ilink in finalData.get('image').values():
+            		    #print(ilink)
+                        path = mname
+                        outfolder=os.path.join(PWD, path)
+                        if not os.path.exists(outfolder):
+                            os.makedirs(outfolder)
+                        print(ilink)
+                        filename = mname+"["+str(i)+"].jpg"
+                        i = i + 1
+                        r = requests.get(ilink, stream = True)
+                        outpath = os.path.join(outfolder, filename)
+                        print(outpath)
+                        with open(outpath,'wb') as f:
+                            shutil.copyfileobj(r.raw, f)
+                        iObject = phoneImg.objects.create(
+                            modelNo = mname,
+                        	picture = mname+"/"+filename,
+                        )
+                        iObject.save()
+                except:
+                    print("error[phoneWeb]")
+                    pass
             ####
-            try:
-                pDObject = phoneData.objects.create(
-                	name  = finalData.get('name'),
-                	#link = finalData.get('link'),
-                	modelNo = finalData.get('name'),
-                	network = finalData.get('Network').get('Technology'),
-                	launch = finalData.get('Launch').get('Announced'),
-                	body = finalData.get('Body').get('Dimensions'),
-                	display = finalData.get('Tests').get('Display'),
-                	platform = finalData.get('Platform').get('OS'),
-                	memory = finalData.get('Memory').get('Internal'),
-                	camera = finalData.get('Tests').get('Camera'),
-                	gpu = finalData.get('Platform').get('GPU'),
-                	dimension = finalData.get('Display').get('Size'),
-                	battery = finalData.get('Battery').get('Charging'),
-                	price = 1000,#finalData.get('Misc').get('Price'),
-                    picture = finalData.get('name')+"/"+finalData.get('name')+"[1].jpg"#"OnePlus8Pro/OnePlus8Pro[1].jpg"
-                )
-                pDObject.save()
-            except:
-                print("error[phoneData]")
-                pass
+                try:
+                    #mname = re.sub(" ","",str(name))
+                    pDObject = phoneData.objects.create(
+                    	name  = finalData.get('name'),
+                    	#link = finalData.get('link'),
+                    	modelNo = mname,
+                    	network = finalData.get('Network').get('Technology'),
+                    	launch = finalData.get('Launch').get('Announced'),
+                    	body = finalData.get('Body').get('Dimensions'),
+                    	display = finalData.get('Tests').get('Display'),
+                    	platform = finalData.get('Platform').get('OS'),
+                    	memory = finalData.get('Memory').get('Internal'),
+                    	camera = finalData.get('Tests').get('Camera'),
+                    	gpu = finalData.get('Platform').get('GPU'),
+                    	dimension = finalData.get('Display').get('Size'),
+                    	battery = finalData.get('Battery').get('Charging'),
+                    	price = 1000,#finalData.get('Misc').get('Price'),
+                        picture = mname+"/"+mname+"[0].jpg"#"OnePlus8Pro/OnePlus8Pro[1].jpg"
+                    )
+                    pDObject.save()
+                except:
+                    print("error[phoneData]")
+                    pass
+            else:
+                try:
+                    pDObject = phoneData.objects.create(
+                    	name  = pWObject.name,
+                    	#link = finalData.get('link'),
+                    	modelNo = mname,
+                    	network = pWObject.NetworkTechnology,
+                    	launch = pWObject.LaunchAnnounced,
+                    	body = pWObject.BodyDimensions,
+                    	display = pWObject.TestsDisplay,
+                    	platform = pWObject.PlatformOS,
+                    	memory = pWObject.MemoryInternal,
+                    	camera = pWObject.TestsCamera,
+                    	gpu = pWObject.PlatformGPU,
+                    	dimension = pWObject.DisplaySize,
+                    	battery = pWObject.BatteryCharging,
+                    	price = 1000,#finalData.get('Misc').get('Price'),
+                        picture = mname+"/"+mname+"[0].jpg"#"OnePlus8Pro/OnePlus8Pro[1].jpg"
+                    )
+                    pDObject.save()
+                except:
+                    print("error[phoneData]")
+                    pass
             ###
-            mname = re.sub(" ","",str(name))
-            i = 0
-            for ilink in finalData.get('image').values():
-    		    #print(ilink)
-                path = mname
-                outfolder=os.path.join(PWD, path)
-                if not os.path.exists(outfolder):
-                    os.makedirs(outfolder)
-                print(ilink)
-                filename = mname+"["+str(i)+"].jpg"
-                i = i + 1
-                r = requests.get(ilink, stream = True)
-                outpath = os.path.join(outfolder, filename)
-                print(outpath)
-                with open(outpath,'wb') as f:
-                    shutil.copyfileobj(r.raw, f)
-                iObject = phoneImg.objects.create(
-                    modelNo = mname,
-                	picture = mname+"/"+filename,
-                )
-                iObject.save()
+            #mname = re.sub(" ","",str(name))
             ###
             '''pBenchObject = phoneBench.objects.filter(device = object.name)
             if pBenchObject.count() == 0:
