@@ -1,50 +1,41 @@
 {% extends 'base.html' %}
 
 {% block title %}
-	{{ data.name }} | {{ block.super }}
+Analysis of Tweet | {{ data.name }} | {{ block.super }}
 {% endblock title %}
 
 {% block content %}
-
-	<table id="contentTable">
-		<tr>
-			<td id="contentLeftHome">
-			<div id="mainContent">
-                <div class="row">
-									<div class="col-lg-6"><h1 align="center">{{ data.name }}</h1></div>
-								<form class="form-inline mt-2 mt-md-0" method='GET' action=''>
-										<input class="form-control mr-sm-2" type='text' name='tag' placeholder='Search Tags' value='{{ request.GET.tag }}' autofocus />
-										<input class="btn btn-success my-2 my-sm-0" type='submit' value='Search' />
-								</form>
-								</div>
-						<div class="list">
-						<div class="row"><div class="col-lg-6">Positive: </div><div class="col-lg-6">{{ data.pt }}</div></div>
-						<main role="main" class="container">
-												{% for pt in dataPt %}
-														<div class="alert alert-success">
-																<div class="row"><div class="col">{{ pt.text }}</div></div>
-														</div>
-												{% endfor %}
-							</main>
-					    <div class="row"><div class="col-lg-6">Negative: </div><div class="col-lg-6">{{ data.nt }}</div></div>
-												<main role="main" class="container">
-																		{% for nt in dataNt %}
-																				<div class="alert alert-danger">
-																						<div class="row"><div class="col">{{ nt.text }}</div></div>
-																				</div>
-																		{% endfor %}
-							</main>
-							<div class="row"><div class="col-lg-6">Neutral: </div><div class="col-lg-6">{{ data.nnt }}</div></div>
-							<main role="main" class="container">
-													{% for pt in dataNnt %}
-															<div class="alert alert-info">
-																	<div class="row"><div class="col">{{ pt.text }}</div></div>
-															</div>
-													{% endfor %}
-								</main>
-						</div>
-					</td>
-					</tr>
-					</table>
-
+<div class="row">
+	<div class="col-lg-6"><h1 align="center">{{ data.name }}</h1></div>
+		<form class="form-inline mt-2 mt-md-0" method='GET' action=''>
+			<input class="form-control mr-sm-2" type='text' name='tag' placeholder='Search Tags' value='{{ request.GET.tag }}' autofocus />
+			<input class="btn btn-success my-2 my-sm-0" type='submit' value='Search' />
+		</form>
+	</div>
+	<div class="list">
+		<div class="row"><div class="col-lg-6">Positive: </div><div class="col-lg-6">{{ data.pt }}</div></div>
+		<main role="main" class="container">
+			{% for pt in dataPt %}
+			<div class="alert alert-success">
+				<div class="row"><div class="col">{{ pt.text }}</div></div>
+			</div>
+			{% endfor %}
+		</main>
+		<div class="row"><div class="col-lg-6">Negative: </div><div class="col-lg-6">{{ data.nt }}</div></div>
+		<main role="main" class="container">
+			{% for nt in dataNt %}
+			<div class="alert alert-danger">
+				<div class="row"><div class="col">{{ nt.text }}</div></div>
+			</div>
+			{% endfor %}
+		</main>
+		<div class="row"><div class="col-lg-6">Neutral: </div><div class="col-lg-6">{{ data.nnt }}</div></div>
+		<main role="main" class="container">
+			{% for pt in dataNnt %}
+			<div class="alert alert-info">
+				<div class="row"><div class="col">{{ pt.text }}</div></div>
+			</div>
+			{% endfor %}
+		</main>
+</div>
 {% endblock %}

@@ -87,7 +87,7 @@ class antutu(models.Model):
 class PosTweet(models.Model):
     posphone = models.ForeignKey(phoneBench, related_name='PosTweet' ,on_delete=models.CASCADE)
     tag = models.CharField(max_length=140 ,unique=False)
-    text = models.CharField(max_length=140 ,unique=True)
+    text = models.CharField(max_length=280 ,unique=True)
 
     def __str__(self):
         return self.tag
@@ -95,7 +95,7 @@ class PosTweet(models.Model):
 class NegTweet(models.Model):
     negphone = models.ForeignKey(phoneBench, related_name='NegTweet' ,on_delete=models.CASCADE)
     tag = models.CharField(max_length=140 ,unique=False)
-    text = models.CharField(max_length=140 ,unique=True)
+    text = models.CharField(max_length=280 ,unique=True)
 
     def __str__(self):
         return self.tag
@@ -103,7 +103,7 @@ class NegTweet(models.Model):
 class NeuTweet(models.Model):
     neuphone = models.ForeignKey(phoneBench, related_name='NeuTweet' ,on_delete=models.CASCADE)
     tag = models.CharField(max_length=140 ,unique=False)
-    text = models.CharField(max_length=140 ,unique=True)
+    text = models.CharField(max_length=280 ,unique=True)
 
     def __str__(self):
         return self.tag

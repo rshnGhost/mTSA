@@ -5,22 +5,10 @@
 {% endblock title %}
 
 {% block content %}
-	<table id="contentTable">
-        <tr>
-			<td colspan="2" id="contentMiddle">
-				<table align="center">
-                    <tr>
-                        <td>
-                            <form method='POST' action='' id="usrform">
-                                <textarea class="form-control mr-sm-2" rows="5" cols="28"  maxlength="140" name="tweet" form="usrform" placeholder='Tweet'></textarea>
-                                <!--input type='textarea' name='tweet' placeholder='Tweet' value='{{ request.GET.tweet }}'
-                                       maxlength="140" size="140" autofocus /-->
-                                <input class="btn btn-success my-2 my-sm-0" type='submit' value='Send' />
-                            </form>
-                        </td>
-                    </tr>
-				</table>
-			</td>
-		</tr>
-	</table>
+<form method='POST' action='' id="usrform">
+	<textarea class="form-control mr-sm-2" maxlength="280" name="tweet" form="usrform" placeholder='Tweet'></textarea>
+	<!--input type='textarea' name='tweet' placeholder='Tweet' value='{{ request.GET.tweet }}'
+	maxlength="140" size="140" autofocus /-->
+	<input class="btn btn-success my-2 my-sm-0" type='submit' value='Send' />
+</form>
 {% endblock %}

@@ -8,13 +8,19 @@ __pycache__/
 *.pyc
 *.py[cod]
 
-#
+# ignore unwanted folder
 Files/mediaFile/*
 !Files/mediaFile/default/.nomedia.txt
 !Files/mediaFile/.nomedia.txt
 
 Files/staticFile/*
 !Files/staticFile/.nomedia.txt
+
+src/dataStorage/migrations/*
+!src/dataStorage/migrations/__init__.py
+
+src/mobile/migrations/*
+!src/mobile/migrations/__init__.py
 
 # C extensions
 *.so
