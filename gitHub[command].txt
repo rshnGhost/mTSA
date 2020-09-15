@@ -7,4 +7,4 @@ git commit - m "messgae"
 git push origin master
 
 python src\manage.py dumpdata --indent=4 > dumped_data.json
-python src\manage.py loaddata < dumped_data.json
+python src\manage.py loaddata dumped_data.json
