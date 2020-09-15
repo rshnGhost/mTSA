@@ -32,7 +32,7 @@ class Search:
         self.data = []
         if spec:
             self.data.append(spec.text.split(" - ")[0])
-            print(self.data)
+            #print(self.data)
         spec = content.find('div', attrs = {'id':'model-brief-specifications'})
         #[x.extract() for x in content.findAll('span')]
         #[x.extract() for x in content.findAll('a')]

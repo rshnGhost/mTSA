@@ -103,8 +103,8 @@ class Command(BaseCommand):
         for object in cacheObject:
             ####
             mname = re.sub(" ","",str(object.name))
-            pWObject = phoneWeb.objects.filter(name = object.name)
-            if pWObject.count() != 0:
+            pWebObject = phoneWeb.objects.filter(name = object.name)
+            if pWebObject.count() == 0:
                 try:
                     finalData = processWData(object.name)
                 except:
@@ -112,7 +112,7 @@ class Command(BaseCommand):
                     pass
                 finalData = (finalData.dataWP)
                 name  = finalData.get('name')
-                print(finalData)
+                #print(finalData)
                 try:
                     pWObject = phoneWeb.objects.create(
                     	name  = finalData.get('name'),
@@ -193,6 +193,7 @@ class Command(BaseCommand):
             ####
                 try:
                     #mname = re.sub(" ","",str(name))
+                    #pWebObject
                     pDObject = phoneData.objects.create(
                     	name  = finalData.get('name'),
                     	#link = finalData.get('link'),
@@ -215,28 +216,28 @@ class Command(BaseCommand):
                     print("error[phoneData]")
                     pass
             else:
-                try:
-                    pDObject = phoneData.objects.create(
-                    	name  = pWObject.name,
-                    	#link = finalData.get('link'),
-                    	modelNo = mname,
-                    	network = pWObject.NetworkTechnology,
-                    	launch = pWObject.LaunchAnnounced,
-                    	body = pWObject.BodyDimensions,
-                    	display = pWObject.TestsDisplay,
-                    	platform = pWObject.PlatformOS,
-                    	memory = pWObject.MemoryInternal,
-                    	camera = pWObject.TestsCamera,
-                    	gpu = pWObject.PlatformGPU,
-                    	dimension = pWObject.DisplaySize,
-                    	battery = pWObject.BatteryCharging,
-                    	price = 1000,#finalData.get('Misc').get('Price'),
-                        picture = mname+"/"+mname+"[0].jpg"#"OnePlus8Pro/OnePlus8Pro[1].jpg"
-                    )
-                    pDObject.save()
-                except:
-                    print("error[phoneData]")
-                    pass
+                #try:
+                pDObject = phoneData.objects.create(
+                	name  = object.name,
+                	#link = finalData.get('link'),
+                	modelNo = mname,
+                	network = pWebObject.NetworkTechnology,
+                	launch = pWebObject.LaunchAnnounced,
+                	body = pWebObject.BodyDimensions,
+                	display = pWebObject.TestsDisplay,
+                	platform = pWebObject.PlatformOS,
+                	memory = pWebObject.MemoryInternal,
+                	camera = pWebObject.TestsCamera,
+                	gpu = pWebObject.PlatformGPU,
+                	dimension = pWebObject.DisplaySize,
+                	battery = pWebObject.BatteryCharging,
+                	price = 1000,#finalData.get('Misc').get('Price'),
+                    picture = mname+"/"+mname+"[0].jpg"#"OnePlus8Pro/OnePlus8Pro[1].jpg"
+                )
+                pDObject.save()
+                #except:
+                #    print("error[phoneData-pWObject]")
+                #    pass
             ###
             #mname = re.sub(" ","",str(name))
             ###
