@@ -6,7 +6,7 @@ from .models import phoneData
 from .models import phoneImg
 from .models import phoneBench
 from .models import PosTweet, NegTweet, NeuTweet
-from .models import cache, phoneWeb
+from .models import cache, phoneWeb, antutu
 
 class PosTweetInline(admin.TabularInline):#StackedInline
 	model = PosTweet
@@ -31,7 +31,7 @@ class phoneDataAdmin(admin.ModelAdmin):
 		model = phoneData
 
 class phoneBenchAdmin(admin.ModelAdmin):
-	list_display = ["device", "pt", "nt", "net", "cpu", "ux", "ddd" , "total" ]
+	list_display = ["device", "pt", "nt", "net", "cpu", "gpu", "mem", "ux", "total" ]
 	list_display_links = ["device"]
 	#list_editable = ["pt", "net", "nt"]
 	list_filter = ["device", "total"]
@@ -53,6 +53,7 @@ class cacheAdmin(admin.ModelAdmin):
 
 admin.site.register(phoneData, phoneDataAdmin)
 admin.site.register(phoneImg)
+admin.site.register(antutu)
 admin.site.register(PosTweet)
 admin.site.register(NegTweet)
 admin.site.register(NeuTweet)

@@ -27,28 +27,29 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
 #CREATE YOUR TABLES HERE
 
 class phoneBench(models.Model):
-	device = models.CharField(max_length=250)
-	modelNo = models.CharField(max_length=250, unique=True)
-	ram = models.CharField(max_length=250)
-	cpu  = models.IntegerField(null=True)
-	ux  = models.IntegerField(null=True)
-	ddd  = models.IntegerField(null=True)
-	total  = models.IntegerField(null=True)
-	nt = models.IntegerField(null=True)
-	net = models.IntegerField(null=True)
-	pt = models.IntegerField(null=True)
+    device = models.CharField(max_length=250)
+    modelNo = models.CharField(max_length=250, unique=True)
+    ram = models.CharField(max_length=250)
+    cpu  = models.IntegerField(null=True)
+    gpu  = models.IntegerField(null=True)
+    mem  = models.IntegerField(null=True)
+    ux  = models.IntegerField(null=True)
+    total  = models.IntegerField(null=True)
+    nt = models.IntegerField(null=True)
+    net = models.IntegerField(null=True)
+    pt = models.IntegerField(null=True)
 
-	def __str__(self):
-		return '%s' % self.device
+    def __str__(self):
+        return '%s' % self.device
 
-	def __unicode__(self):
-		return '%s' % self.device
+    def __unicode__(self):
+        return '%s' % self.device
 
-	class Meta:
-		ordering = ["-device", "-total"]
+    class Meta:
+        ordering = ["-device", "-total"]
 
 class phoneData(models.Model):
-	name = models.CharField(max_length=250)
+	name = models.CharField(max_length=250,null=True)
 	modelNo = models.CharField(max_length=250, unique=True)
 	network  = models.CharField(max_length=250,null=True)
 	launch  = models.CharField(max_length=250,null=True)
@@ -73,6 +74,14 @@ class phoneData(models.Model):
 
 	class Meta:
 		ordering = ["-name", "-modelNo"]
+
+class antutu(models.Model):
+    month = models.CharField(max_length=140 ,unique=False)
+    url = models.CharField(max_length=140 ,unique=False)
+    type = models.CharField(max_length=140 ,unique=False)
+
+    def __str__(self):
+        return self.month+"["+self.type+"]"
 
 class PosTweet(models.Model):
     posphone = models.ForeignKey(phoneBench, related_name='PosTweet' ,on_delete=models.CASCADE)
@@ -120,56 +129,56 @@ class phoneImg(models.Model):
 		ordering = ["-modelNo"]
 
 class phoneWeb(models.Model):
-	name  = models.CharField(max_length=250)
-	link = models.CharField(max_length=250)
-	NetworkTechnology = models.CharField(max_length=250)
-	Network2Gbands = models.CharField(max_length=250)
-	Network3Gbands = models.CharField(max_length=250)
-	Network4Gbands = models.CharField(max_length=250)
-	NetworkSpeed = models.CharField(max_length=250)
-	LaunchAnnounced = models.CharField(max_length=250)
-	LaunchStatus = models.CharField(max_length=250)
-	BodyDimensions = models.CharField(max_length=250)
-	BodyWeight = models.CharField(max_length=250)
-	BodyBuild = models.CharField(max_length=250)
-	BodySIM = models.CharField(max_length=250)
-	DisplayType = models.CharField(max_length=250)
-	DisplaySize = models.CharField(max_length=250)
-	DisplayResolution = models.CharField(max_length=250)
-	DisplayOption = models.CharField(max_length=250)
-	PlatformOS = models.CharField(max_length=250)
-	PlatformChipset = models.CharField(max_length=250)
-	PlatformCPU = models.CharField(max_length=250)
-	PlatformGPU = models.CharField(max_length=250)
-	MemoryCardslot = models.CharField(max_length=250)
-	MemoryInternal = models.CharField(max_length=250)
-	MemoryOption = models.CharField(max_length=250)
-	MainCameraTriple = models.CharField(max_length=250)
-	MainCameraFeatures = models.CharField(max_length=250)
-	MainCameraVideo = models.CharField(max_length=250)
-	SelfiecameraSingle = models.CharField(max_length=250)
-	SelfiecameraFeatures = models.CharField(max_length=250)
-	SelfiecameraVideo = models.CharField(max_length=250)
-	SoundLoudspeaker  = models.CharField(max_length=250)
-	Sound35mmjack  = models.CharField(max_length=250)
-	CommsWLAN = models.CharField(max_length=250)
-	CommsBluetooth = models.CharField(max_length=250)
-	CommsGPS = models.CharField(max_length=250)
-	CommsRadio = models.CharField(max_length=250)
-	CommsUSB = models.CharField(max_length=250)
-	FeaturesSensors = models.CharField(max_length=250)
-	BatteryOption = models.CharField(max_length=250)
-	BatteryCharging = models.CharField(max_length=250)
-	MiscColors = models.CharField(max_length=250)
-	MiscModels = models.CharField(max_length=250)
-	MiscSAR = models.CharField(max_length=250)
-	MiscSAREU = models.CharField(max_length=250)
-	MiscPrice = models.CharField(max_length=250)
-	TestsPerformance = models.CharField(max_length=250)
-	TestsDisplay = models.CharField(max_length=250)
-	TestsCamera = models.CharField(max_length=250)
-	TestsAudioquality = models.CharField(max_length=250)
-	TestsBatterylife = models.CharField(max_length=250)
+	name  = models.CharField(max_length=250 ,null=True)
+	link = models.CharField(max_length=250 ,null=True)
+	NetworkTechnology = models.CharField(max_length=250 ,null=True)
+	Network2Gbands = models.CharField(max_length=250 ,null=True)
+	Network3Gbands = models.CharField(max_length=250 ,null=True)
+	Network4Gbands = models.CharField(max_length=250 ,null=True)
+	NetworkSpeed = models.CharField(max_length=250 ,null=True)
+	LaunchAnnounced = models.CharField(max_length=250 ,null=True)
+	LaunchStatus = models.CharField(max_length=250 ,null=True)
+	BodyDimensions = models.CharField(max_length=250 ,null=True)
+	BodyWeight = models.CharField(max_length=250 ,null=True)
+	BodyBuild = models.CharField(max_length=250 ,null=True)
+	BodySIM = models.CharField(max_length=250 ,null=True)
+	DisplayType = models.CharField(max_length=250 ,null=True)
+	DisplaySize = models.CharField(max_length=250 ,null=True)
+	DisplayResolution = models.CharField(max_length=250 ,null=True)
+	DisplayOption = models.CharField(max_length=250 ,null=True)
+	PlatformOS = models.CharField(max_length=250 ,null=True)
+	PlatformChipset = models.CharField(max_length=250 ,null=True)
+	PlatformCPU = models.CharField(max_length=250 ,null=True)
+	PlatformGPU = models.CharField(max_length=250 ,null=True)
+	MemoryCardslot = models.CharField(max_length=250 ,null=True)
+	MemoryInternal = models.CharField(max_length=250 ,null=True)
+	MemoryOption = models.CharField(max_length=250 ,null=True)
+	MainCameraTriple = models.CharField(max_length=250 ,null=True)
+	MainCameraFeatures = models.CharField(max_length=250 ,null=True)
+	MainCameraVideo = models.CharField(max_length=250 ,null=True)
+	SelfiecameraSingle = models.CharField(max_length=250 ,null=True)
+	SelfiecameraFeatures = models.CharField(max_length=250 ,null=True)
+	SelfiecameraVideo = models.CharField(max_length=250 ,null=True)
+	SoundLoudspeaker  = models.CharField(max_length=250 ,null=True)
+	Sound35mmjack  = models.CharField(max_length=250 ,null=True)
+	CommsWLAN = models.CharField(max_length=250 ,null=True)
+	CommsBluetooth = models.CharField(max_length=250 ,null=True)
+	CommsGPS = models.CharField(max_length=250 ,null=True)
+	CommsRadio = models.CharField(max_length=250 ,null=True)
+	CommsUSB = models.CharField(max_length=250 ,null=True)
+	FeaturesSensors = models.CharField(max_length=250 ,null=True)
+	BatteryOption = models.CharField(max_length=250 ,null=True)
+	BatteryCharging = models.CharField(max_length=250 ,null=True)
+	MiscColors = models.CharField(max_length=250 ,null=True)
+	MiscModels = models.CharField(max_length=250 ,null=True)
+	MiscSAR = models.CharField(max_length=250 ,null=True)
+	MiscSAREU = models.CharField(max_length=250 ,null=True)
+	MiscPrice = models.CharField(max_length=250 ,null=True)
+	TestsPerformance = models.CharField(max_length=250 ,null=True)
+	TestsDisplay = models.CharField(max_length=250 ,null=True)
+	TestsCamera = models.CharField(max_length=250 ,null=True)
+	TestsAudioquality = models.CharField(max_length=250 ,null=True)
+	TestsBatterylife = models.CharField(max_length=250 ,null=True)
 
 	def __str__(self):
 		return self.name

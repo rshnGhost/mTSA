@@ -1,0 +1,2251 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ranking - AnTuTu Benchmark - Know Your Android Better</title>
+    <meta name="Keywords" content="antutu benchmark ranking 2019,antutu ranking,antutu benchmark ranking,ranking antutu,antutu ranking 2019,antutu score,antutu benchmark top 100" />
+    <meta name="Description" content="Latest AnTuTu benchmark ranking,the best smartphone list" />
+    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-d9zN4hyqVMutzD6vaxBO3uzAcUrY7hqWa1eAiLLeY2Nu3XS0mYr2ReKuOU1YxmFfQbBoO96yoNiFFIkjz45pQ" charset="UTF-8"></script><script type="text/javascript" src="/Public/En/js/jquery-1.7.2.min.js"></script>
+    <!--<script type="text/javascript" src="/Public/En/js/jquery.SuperSlide.2.1.1.js"></script>-->
+    <link href="/Public/En/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/Public/En/css/jquery.rating.css" type="text/css" rel="stylesheet">
+    <link href="/Public/En/css/global.css" type="text/css" rel="stylesheet">
+    <link href="/Public/En/css/main.css?ver=18" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script type="text/javascript" src="/Public/En/js/TouchSlide.1.11.js"></script>
+</head>
+
+<body>
+    <div id="section1" init="true" class="section section1">
+        <!--页面头部-->
+
+        <div class="toptip">
+            <div class="top">
+                <div class="tleft">
+                    <a hreflang="en" href="http://www.antutu.com/en/index.htm">
+                        <img src="/Public/En/images/att_lobo.png"  alt="Antutu logo"></a>
+                </div>
+                <div class="tright">
+                    <ul>
+                        <li><a hreflang="en" href="/en/index.htm"   >Home</a> </li>
+                        <li><a hreflang="en" href="/en/ranking/rank1.htm" class="trcur" >Ranking</a> </li>
+                        <li><a hreflang="en" href="/en/download.htm"  >Download</a> </li>
+                        <li><a hreflang="en" href="/en/doc/index.htm"  >News</a> </li>
+                    </ul>
+                </div>
+
+                <div class="top_en">
+                	<div style="display: inline-block;margin-top: 8px;">
+                    <a hreflang="zh" style="margin-right: 33px" href="http://www.antutu.com/" target="_blank">简体中文</a>
+                    </div>
+
+                    <a target="_blank" href="https://twitter.com/AnTuTuLabs" class="s_twitteracc s_icon" style="margin-top: 0px;"></a>
+                    <a target="_blank" href="https://www.facebook.com/antutulabs" class="s_fb_fanpage s_icon"></a>
+                </div>
+            </div>
+        </div>
+    <script language="javascript">
+        $(function () {
+            var ProductTime;
+            $('div.m_box').hover(function () {
+                $('ul.m2_box').show();
+            })
+            $('ul.m2_box li').hover(function () {
+                $(this).css({ 'background-color': '#0e3152' });
+            },
+                    function () {
+                        $(this).css({ 'background': 'none' });
+                    });
+
+            $('li.ProductMenu').hover(function () {
+                window.clearTimeout(ProductTime);
+            }, function () {
+                ProductTime = setTimeout(function () {
+                    $('ul.m2_box').hide();
+                }, 500)
+            });
+        });
+        function head_tabSwatch(tab_index) {
+            if (!$.isNumeric(tab_index)) {
+                link = '#';
+                text = '';
+                if (jQuery.type(tab_index) == 'string') {
+
+                    if ($('#pageTable').html().indexOf(tab_index) != -1) {
+                        $('#pageTable li a').each(function () {
+                            $(this).parent().removeClass('on')
+                            if ($(this).attr('href').indexOf(tab_index) != -1) {
+                                $(this).parent().addClass('on')
+                            }
+                        })
+                    }
+                } else {
+                    $.each(tab_index, function (k, v) {
+                        if (jQuery.type(k) == 'string' && jQuery.type(v) == 'string' &&
+                                $('#pageTable').attr('href').indexOf(k) == -1 && $('#pageTable').html().indexOf(k) == -1) {
+                            $('#pageTable').append('<li><a href=' + v + '>' + k + '</a></li>')
+                        } else if (jQuery.type(k) == 'string' && jQuery.type(v) == 'string') {
+                            $('pageTable li').removeClass('on');
+                            $('li#' + k).addClass = 'on';
+                        }
+
+                    })
+
+                }
+            } else {
+                $('#pageTable li').removeClass('on');
+                $('#pageTable li:eq(' + tab_index + ')').addClass('on')
+            }
+
+        }
+    </script>
+
+
+    <script language="javascript">
+        head_tabSwatch('News');
+    </script>
+    <div class="mainbor mt2" style="padding: 0px 0px 10px 0px;">
+
+
+        <div class="rank_title">
+
+
+            <div style="width:250px;" class="rank_title_div rank_title_selected">
+                <b><a style="font-size: 18px;" href="#">Performance Ranking of V8</a> </b>
+
+            </div>
+
+            <!--搜索-->
+            <div class="search_box" style="float: right; padding: 15px 10px; /*background-color: #EEEEEE;*/">
+               <form action="/en/search.htm" method="get">
+	<input name="keyword" type="text" value="" class="search_i"/>
+	<input type="submit" style="width:33px;height:20px;background:url(/Public/Home/images/search-button.png)" value=""/>
+	<div class="cl"></div>
+</form>
+
+            </div>
+            <div style="float: right;color: #999999;margin-top: 30px;margin-right: 35px;">*August 2020</div>
+        </div>
+
+
+        <div class="m_l fl">
+        <ul class="rank_cond">
+             <li><a class="zonghe_bg zonghe_bg_selected" href="/en/ranking/rank1.htm">Android</a><em></em></li>
+             <li><a class="xingjia_bg" href="/en/ranking/ios1.htm">iOS</a></li>
+         </ul>
+            <ul class="list-unstyled newrank-a">
+                <li class="afirst"><span></span>Device</li>
+                <li><a href="/en/ranking/rank2.htm">CPU<span class="icon iconfont ">&#xe603;</span> </a></li>
+                <li> <a href="/en/ranking/rank6.htm">GPU<span class="icon iconfont ">&#xe603;</span></a> </li>
+                <li><a href="/en/ranking/rank7.htm">MEM<span class="icon iconfont ">&#xe603;</span> </a></li>
+                <li> <a href="/en/ranking/rank4.htm">UX<span class="icon iconfont ">&#xe603;</span></a></li>
+                <li class="alast"><a href="/en/ranking/rank1.htm">Total Score<span class="icon iconfont active">&#xe603;</span></a></li>
+            </ul>
+            <ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 95.24%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank num1 link">1</span>ROG Phone 3<span class="memory"> (12+128) </span></li>
+                        <li>181444</li>
+                        <li>234643</li>
+                        <li>99399</li>
+                        <li>99798</li>
+                        <li class="blast">615289</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 94.51%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank num2 link">2</span>OnePlus 8 Pro<span class="memory"> (12+256) </span></li>
+                        <li>177662</li>
+                        <li>243108</li>
+                        <li>99908</li>
+                        <li>89883</li>
+                        <li class="blast">610567</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 93.17%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank num3 link">3</span>OPPO Find X2 Pro<span class="memory"> (12+512) </span></li>
+                        <li>183310</li>
+                        <li>217945</li>
+                        <li>109254</li>
+                        <li>91393</li>
+                        <li class="blast">601910</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 92.15%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">4</span>Galaxy Note20 Ultra 5G (865+)<span class="memory"> (12+256) </span></li>
+                        <li>169085</li>
+                        <li>238878</li>
+                        <li>97300</li>
+                        <li>90047</li>
+                        <li class="blast">595317</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 91.34%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">5</span>Redmi K30 Pro<span class="memory"> (8+128) </span></li>
+                        <li>184173</li>
+                        <li>219765</li>
+                        <li>101146</li>
+                        <li>84987</li>
+                        <li class="blast">590078</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 88.32%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">6</span>Poco F2 Pro<span class="memory"> (8+256) </span></li>
+                        <li>180070</li>
+                        <li>214787</li>
+                        <li>97418</li>
+                        <li>78343</li>
+                        <li class="blast">570624</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 87.16%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">7</span>Mi 10<span class="memory"> (8+256) </span></li>
+                        <li>177372</li>
+                        <li>214804</li>
+                        <li>87530</li>
+                        <li>83403</li>
+                        <li class="blast">563116</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 81.63%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">8</span>Galaxy Note20 Ultra 5G (990)<span class="memory"> (12+256) </span></li>
+                        <li>150213</li>
+                        <li>211317</li>
+                        <li>86726</li>
+                        <li>79090</li>
+                        <li class="blast">527353</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 79.96%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">9</span>Galaxy S20 Ultra 5G (990)<span class="memory"> (12+128) </span></li>
+                        <li>154169</li>
+                        <li>215022</li>
+                        <li>72575</li>
+                        <li>74780</li>
+                        <li class="blast">516553</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 79.79%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">10</span>Galaxy S20+ 5G (990)<span class="memory"> (12+128) </span></li>
+                        <li>151670</li>
+                        <li>215138</li>
+                        <li>73043</li>
+                        <li>75643</li>
+                        <li class="blast">515501</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 77.44%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">11</span>Galaxy S20 5G (990)<span class="memory"> (8+128) </span></li>
+                        <li>149456</li>
+                        <li>205518</li>
+                        <li>72159</li>
+                        <li>73190</li>
+                        <li class="blast">500329</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 75.44%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">12</span>realme X3<span class="memory"> (8+128) </span></li>
+                        <li>138642</li>
+                        <li>186225</li>
+                        <li>85469</li>
+                        <li>77040</li>
+                        <li class="blast">487383</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 75%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">13</span>realme X2 Pro<span class="memory"> (8+128) </span></li>
+                        <li>139966</li>
+                        <li>191543</li>
+                        <li>72899</li>
+                        <li>80135</li>
+                        <li class="blast">484549</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 74.62%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">14</span>ROG Phone 2<span class="memory"> (8+128) </span></li>
+                        <li>141618</li>
+                        <li>191760</li>
+                        <li>71752</li>
+                        <li>76959</li>
+                        <li class="blast">482096</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 74.56%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">15</span>HUAWEI P40 Pro 5G<span class="memory"> (8+256) </span></li>
+                        <li>143527</li>
+                        <li>167698</li>
+                        <li>97984</li>
+                        <li>72462</li>
+                        <li class="blast">481676</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 72.93%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">16</span>OnePlus 7 Pro<span class="memory"> (8+256) </span></li>
+                        <li>140720</li>
+                        <li>177160</li>
+                        <li>79791</li>
+                        <li>73464</li>
+                        <li class="blast">471142</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 71.51%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">17</span>Galaxy S10 Lite<span class="memory"> (6+128) </span></li>
+                        <li>137494</li>
+                        <li>176010</li>
+                        <li>77605</li>
+                        <li>70846</li>
+                        <li class="blast">461961</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 69.91%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">18</span>Galaxy Note10+ (9825)<span class="memory"> (12+256) </span></li>
+                        <li>128440</li>
+                        <li>171661</li>
+                        <li>86521</li>
+                        <li>65016</li>
+                        <li class="blast">451647</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 68.78%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">19</span>Mi 9<span class="memory"> (6+128) </span></li>
+                        <li>136360</li>
+                        <li>177386</li>
+                        <li>63260</li>
+                        <li>67348</li>
+                        <li class="blast">444363</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 68.54%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">20</span>Galaxy Note10 (9825)<span class="memory"> (8+256) </span></li>
+                        <li>127188</li>
+                        <li>169320</li>
+                        <li>82780</li>
+                        <li>63486</li>
+                        <li class="blast">442783</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 66.85%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">21</span>Mi 9T Pro<span class="memory"> (6+128) </span></li>
+                        <li>134994</li>
+                        <li>172072</li>
+                        <li>58598</li>
+                        <li>66193</li>
+                        <li class="blast">431864</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 65.81%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">22</span>Redmi K20 Pro<span class="memory"> (6+128) </span></li>
+                        <li>131708</li>
+                        <li>170503</li>
+                        <li>57715</li>
+                        <li>65267</li>
+                        <li class="blast">425197</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 63.93%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">23</span>Galaxy S10+ (9820)<span class="memory"> (8+128) </span></li>
+                        <li>123853</li>
+                        <li>166673</li>
+                        <li>58929</li>
+                        <li>63544</li>
+                        <li class="blast">413007</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 63.26%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">24</span>Galaxy S10e (9820)<span class="memory"> (6+128) </span></li>
+                        <li>121179</li>
+                        <li>165119</li>
+                        <li>58966</li>
+                        <li>63424</li>
+                        <li class="blast">408697</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 63.23%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">25</span>Galaxy S10 (9820)<span class="memory"> (8+128) </span></li>
+                        <li>121301</li>
+                        <li>164947</li>
+                        <li>58973</li>
+                        <li>63249</li>
+                        <li class="blast">408478</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 63.05%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">26</span>HONOR 20 Pro<span class="memory"> (8+256) </span></li>
+                        <li>130516</li>
+                        <li>135424</li>
+                        <li>76657</li>
+                        <li>64754</li>
+                        <li class="blast">407358</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 62.84%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">27</span>LG V50 ThinQ 5G<span class="memory"> (6+128) </span></li>
+                        <li>123380</li>
+                        <li>164949</li>
+                        <li>54082</li>
+                        <li>63544</li>
+                        <li class="blast">405961</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 62.34%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">28</span>HUAWEI P30 Pro<span class="memory"> (8+256) </span></li>
+                        <li>129338</li>
+                        <li>137682</li>
+                        <li>71671</li>
+                        <li>64063</li>
+                        <li class="blast">402760</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 62.1%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">29</span>HUAWEI nova 7<span class="memory"> (8+256) </span></li>
+                        <li>131717</li>
+                        <li>130665</li>
+                        <li>74351</li>
+                        <li>64479</li>
+                        <li class="blast">401220</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 62.03%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">30</span>HONOR 20<span class="memory"> (6+128) </span></li>
+                        <li>131551</li>
+                        <li>135364</li>
+                        <li>68648</li>
+                        <li>65185</li>
+                        <li class="blast">400754</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 61.76%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">31</span>HUAWEI nova 5T<span class="memory"> (6+128) </span></li>
+                        <li>130790</li>
+                        <li>134301</li>
+                        <li>69192</li>
+                        <li>64737</li>
+                        <li class="blast">399026</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 61.68%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">32</span>HUAWEI P30<span class="memory"> (6+128) </span></li>
+                        <li>127928</li>
+                        <li>136927</li>
+                        <li>68975</li>
+                        <li>64640</li>
+                        <li class="blast">398476</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 60.02%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">33</span>HUAWEI Mate 20 Pro<span class="memory"> (6+128) </span></li>
+                        <li>126909</li>
+                        <li>131215</li>
+                        <li>65400</li>
+                        <li>64237</li>
+                        <li class="blast">387770</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 54.93%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">34</span>POCOPHONE F1<span class="memory"> (6+64) </span></li>
+                        <li>99796</li>
+                        <li>146569</li>
+                        <li>51630</li>
+                        <li>56849</li>
+                        <li class="blast">354851</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 54.56%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">35</span>Mi 8<span class="memory"> (6+128) </span></li>
+                        <li>102280</li>
+                        <li>144119</li>
+                        <li>49021</li>
+                        <li>57047</li>
+                        <li class="blast">352474</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 54.4%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">36</span>Galaxy Note 9 (845)<span class="memory"> (6+128) </span></li>
+                        <li>99337</li>
+                        <li>147456</li>
+                        <li>48082</li>
+                        <li>56587</li>
+                        <li class="blast">351468</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 53.95%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">37</span>Mi MIX 2S<span class="memory"> (6+64) </span></li>
+                        <li>102329</li>
+                        <li>140886</li>
+                        <li>48242</li>
+                        <li>57065</li>
+                        <li class="blast">348530</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 51.28%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">38</span>Galaxy Note 10 Lite<span class="memory"> (8+128) </span></li>
+                        <li>106770</li>
+                        <li>117526</li>
+                        <li>56563</li>
+                        <li>50401</li>
+                        <li class="blast">331265</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 50.61%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">39</span>OnePlus Nord<span class="memory"> (8+128) </span></li>
+                        <li>104055</li>
+                        <li>93760</li>
+                        <li>64771</li>
+                        <li>64364</li>
+                        <li class="blast">326958</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 49.06%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">40</span>Galaxy S9+ (9810)<span class="memory"> (6+64) </span></li>
+                        <li>102904</li>
+                        <li>119196</li>
+                        <li>46455</li>
+                        <li>48396</li>
+                        <li class="blast">316957</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 49%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">41</span>Galaxy Note 9 (9810)<span class="memory"> (6+128) </span></li>
+                        <li>101987</li>
+                        <li>118140</li>
+                        <li>47921</li>
+                        <li>48541</li>
+                        <li class="blast">316596</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 48.6%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">42</span>Redmi K30 5G<span class="memory"> (6+64) </span></li>
+                        <li>102103</li>
+                        <li>92700</li>
+                        <li>55224</li>
+                        <li>63918</li>
+                        <li class="blast">313951</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 47.94%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">43</span>HUAWEI nova 7i<span class="memory"> (6+128) </span></li>
+                        <li>96633</li>
+                        <li>86883</li>
+                        <li>68121</li>
+                        <li>58087</li>
+                        <li class="blast">309731</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 45.44%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">44</span>LG G7 ThinQ<span class="memory"> (4+64) </span></li>
+                        <li>93760</li>
+                        <li>103007</li>
+                        <li>44258</li>
+                        <li>52561</li>
+                        <li class="blast">293592</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 44.62%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">45</span>realme 6<span class="memory"> (4+128) </span></li>
+                        <li>95437</li>
+                        <li>77673</li>
+                        <li>60886</li>
+                        <li>54297</li>
+                        <li class="blast">288300</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 44.59%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">46</span>Redmi Note 8 Pro<span class="memory"> (6+128) </span></li>
+                        <li>94692</li>
+                        <li>80958</li>
+                        <li>58445</li>
+                        <li>53973</li>
+                        <li class="blast">288072</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 43.93%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">47</span>realme 6 Pro<span class="memory"> (8+128) </span></li>
+                        <li>102997</li>
+                        <li>70695</li>
+                        <li>53298</li>
+                        <li>56796</li>
+                        <li class="blast">283795</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 43.74%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">48</span>Galaxy S9 (9810)<span class="memory"> (4+64) </span></li>
+                        <li>103146</li>
+                        <li>85021</li>
+                        <li>47245</li>
+                        <li>47142</li>
+                        <li class="blast">282559</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 43.29%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">49</span>Redmi Note 9 Pro<span class="memory"> (8+128) </span></li>
+                        <li>101863</li>
+                        <li>71608</li>
+                        <li>52505</li>
+                        <li>53702</li>
+                        <li class="blast">279685</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 43.15%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">50</span>Redmi Note 9S<span class="memory"> (6+128) </span></li>
+                        <li>101451</li>
+                        <li>71515</li>
+                        <li>52121</li>
+                        <li>53666</li>
+                        <li class="blast">278758</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 42.88%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">51</span>OPPO Reno4 4G<span class="memory"> (8+128) </span></li>
+                        <li>98532</li>
+                        <li>72692</li>
+                        <li>51689</li>
+                        <li>54096</li>
+                        <li class="blast">277016</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 42.57%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">52</span>Mi Note 10 Pro<span class="memory"> (8+256) </span></li>
+                        <li>97086</li>
+                        <li>71435</li>
+                        <li>53942</li>
+                        <li>52578</li>
+                        <li class="blast">275048</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 41.84%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">53</span>Mi Note 10 Lite<span class="memory"> (6+128) </span></li>
+                        <li>96325</li>
+                        <li>71282</li>
+                        <li>50647</li>
+                        <li>52026</li>
+                        <li class="blast">270288</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 41.51%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">54</span>Mi Note 10<span class="memory"> (6+128) </span></li>
+                        <li>96125</li>
+                        <li>71055</li>
+                        <li>49397</li>
+                        <li>51570</li>
+                        <li class="blast">268155</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 40.76%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">55</span>Mi 9T<span class="memory"> (6+128) </span></li>
+                        <li>97445</li>
+                        <li>65064</li>
+                        <li>49203</li>
+                        <li>51616</li>
+                        <li class="blast">263337</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 40.66%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">56</span>Galaxy A71<span class="memory"> (6+128) </span></li>
+                        <li>91906</li>
+                        <li>71623</li>
+                        <li>49279</li>
+                        <li>49877</li>
+                        <li class="blast">262692</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 40.32%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">57</span>HUAWEI P20 Pro<span class="memory"> (6+128) </span></li>
+                        <li>77100</li>
+                        <li>82433</li>
+                        <li>56456</li>
+                        <li>44505</li>
+                        <li class="blast">260500</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 38.77%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">58</span>Galaxy Note 8 (8895)<span class="memory"> (6+64) </span></li>
+                        <li>75513</li>
+                        <li>91065</li>
+                        <li>42941</li>
+                        <li>40923</li>
+                        <li class="blast">250449</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 36.7%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">59</span>HUAWEI Mate 10 Pro<span class="memory"> (6+128) </span></li>
+                        <li>71809</li>
+                        <li>69071</li>
+                        <li>53441</li>
+                        <li>42766</li>
+                        <li class="blast">237095</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 36.23%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">60</span>realme XT<span class="memory"> (8+128) </span></li>
+                        <li>78943</li>
+                        <li>62389</li>
+                        <li>46476</li>
+                        <li>46264</li>
+                        <li class="blast">234077</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 36.12%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">61</span>realme Q<span class="memory"> (8+128) </span></li>
+                        <li>78931</li>
+                        <li>62002</li>
+                        <li>46311</li>
+                        <li>46115</li>
+                        <li class="blast">233367</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 35.97%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">62</span>Galaxy S8 (8895)<span class="memory"> (4+64) </span></li>
+                        <li>77494</li>
+                        <li>71290</li>
+                        <li>43447</li>
+                        <li>40125</li>
+                        <li class="blast">232362</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 35.19%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">63</span>Sony Xperia XZ1<span class="memory"> (4+64) </span></li>
+                        <li>74412</li>
+                        <li>66793</li>
+                        <li>42244</li>
+                        <li>43860</li>
+                        <li class="blast">227316</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 35.15%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">64</span>HONOR 10<span class="memory"> (4+64) </span></li>
+                        <li>74912</li>
+                        <li>53631</li>
+                        <li>55155</li>
+                        <li>43401</li>
+                        <li class="blast">227106</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 35.12%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">65</span>Galaxy S8+ (8895)<span class="memory"> (4+64) </span></li>
+                        <li>75006</li>
+                        <li>70889</li>
+                        <li>41481</li>
+                        <li>39536</li>
+                        <li class="blast">226918</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 35.01%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">66</span>Google Pixel 2 XL<span class="memory"> (4+64) </span></li>
+                        <li>78257</li>
+                        <li>68033</li>
+                        <li>37935</li>
+                        <li>41954</li>
+                        <li class="blast">226185</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 34.69%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">67</span>HONOR Play<span class="memory"> (4+64) </span></li>
+                        <li>75514</li>
+                        <li>51504</li>
+                        <li>54751</li>
+                        <li>42324</li>
+                        <li class="blast">224102</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 33.67%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">68</span>Galaxy A70<span class="memory"> (6+128) </span></li>
+                        <li>89095</li>
+                        <li>35855</li>
+                        <li>44316</li>
+                        <li>48273</li>
+                        <li class="blast">217547</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 33.2%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">69</span>Mi 9 Lite<span class="memory"> (6+128) </span></li>
+                        <li>72260</li>
+                        <li>54455</li>
+                        <li>45731</li>
+                        <li>42021</li>
+                        <li class="blast">214475</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 33%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">70</span>Redmi Note 7 Pro<span class="memory"> (6+128) </span></li>
+                        <li>88926</li>
+                        <li>37626</li>
+                        <li>40346</li>
+                        <li>46264</li>
+                        <li class="blast">213167</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 32.97%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">71</span>realme X Lite<span class="memory"> (4+64) </span></li>
+                        <li>75819</li>
+                        <li>55240</li>
+                        <li>38548</li>
+                        <li>43361</li>
+                        <li class="blast">212975</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 31.11%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">72</span>Redmi 10X 4G<span class="memory"> (4+128) </span></li>
+                        <li>72313</li>
+                        <li>40840</li>
+                        <li>46827</li>
+                        <li>41014</li>
+                        <li class="blast">201001</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 30.64%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">73</span>Redmi 9<span class="memory"> (4+64) </span></li>
+                        <li>73427</li>
+                        <li>40838</li>
+                        <li>42207</li>
+                        <li>41494</li>
+                        <li class="blast">197973</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 29.74%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">74</span>Galaxy A51<span class="memory"> (6+128) </span></li>
+                        <li>60241</li>
+                        <li>47345</li>
+                        <li>46641</li>
+                        <li>37896</li>
+                        <li class="blast">192131</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 29.65%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">75</span>Galaxy M31<span class="memory"> (6+128) </span></li>
+                        <li>58905</li>
+                        <li>47721</li>
+                        <li>47400</li>
+                        <li>37498</li>
+                        <li class="blast">191532</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 28.94%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">76</span>Galaxy S7 (8890)<span class="memory"> (4+32) </span></li>
+                        <li>66903</li>
+                        <li>45066</li>
+                        <li>36669</li>
+                        <li>38313</li>
+                        <li class="blast">186956</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 28.12%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">77</span>Redmi Note 9<span class="memory"> (4+128) </span></li>
+                        <li>64391</li>
+                        <li>41298</li>
+                        <li>39715</li>
+                        <li>36269</li>
+                        <li class="blast">181681</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 28.03%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">78</span>Galaxy S7 Edge (8890)<span class="memory"> (4+32) </span></li>
+                        <li>65327</li>
+                        <li>43946</li>
+                        <li>34346</li>
+                        <li>37435</li>
+                        <li class="blast">181060</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 27.92%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">79</span>Mi 8 Lite<span class="memory"> (4+64) </span></li>
+                        <li>74500</li>
+                        <li>36800</li>
+                        <li>35377</li>
+                        <li>33713</li>
+                        <li class="blast">180397</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 27.57%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">80</span>Redmi Note 7<span class="memory"> (4+128) </span></li>
+                        <li>71501</li>
+                        <li>35908</li>
+                        <li>37019</li>
+                        <li>33660</li>
+                        <li class="blast">178095</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 27.53%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">81</span>Galaxy M21<span class="memory"> (4+64) </span></li>
+                        <li>58902</li>
+                        <li>38416</li>
+                        <li>42879</li>
+                        <li>37640</li>
+                        <li class="blast">177844</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 27.38%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">82</span>Mi A3<span class="memory"> (4+64) </span></li>
+                        <li>70801</li>
+                        <li>31470</li>
+                        <li>42083</li>
+                        <li>32516</li>
+                        <li class="blast">176875</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 27.18%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">83</span>HONOR 9X<span class="memory"> (4+128) </span></li>
+                        <li>68780</li>
+                        <li>24780</li>
+                        <li>44702</li>
+                        <li>37328</li>
+                        <li class="blast">175596</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 26.94%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">84</span>Redmi Note 8<span class="memory"> (4+64) </span></li>
+                        <li>71025</li>
+                        <li>32173</li>
+                        <li>36935</li>
+                        <li>33930</li>
+                        <li class="blast">174071</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 26.85%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">85</span>Redmi Note 8T<span class="memory"> (4+64) </span></li>
+                        <li>70898</li>
+                        <li>31573</li>
+                        <li>36663</li>
+                        <li>34314</li>
+                        <li class="blast">173457</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 26.81%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">86</span>Vsmart Active 3<span class="memory"> (6+64) </span></li>
+                        <li>68223</li>
+                        <li>31710</li>
+                        <li>36703</li>
+                        <li>36593</li>
+                        <li class="blast">173236</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 26.57%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">87</span>realme 5i<span class="memory"> (4+64) </span></li>
+                        <li>70417</li>
+                        <li>33990</li>
+                        <li>35899</li>
+                        <li>31347</li>
+                        <li class="blast">171661</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 26.23%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">88</span>Mi A2<span class="memory"> (4+64) </span></li>
+                        <li>67201</li>
+                        <li>36032</li>
+                        <li>31566</li>
+                        <li>34670</li>
+                        <li class="blast">169475</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 25.85%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">89</span>HONOR 8X<span class="memory"> (4+64) </span></li>
+                        <li>69542</li>
+                        <li>24916</li>
+                        <li>35189</li>
+                        <li>37340</li>
+                        <li class="blast">166994</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 25.8%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">90</span>HONOR 10i<span class="memory"> (4+128) </span></li>
+                        <li>66920</li>
+                        <li>25018</li>
+                        <li>37247</li>
+                        <li>37475</li>
+                        <li class="blast">166666</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 25.73%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">91</span>Galaxy A50<span class="memory"> (4+64) </span></li>
+                        <li>58695</li>
+                        <li>36007</li>
+                        <li>34108</li>
+                        <li>37410</li>
+                        <li class="blast">166226</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 25.37%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">92</span>realme 5<span class="memory"> (3+64) </span></li>
+                        <li>70743</li>
+                        <li>25795</li>
+                        <li>35976</li>
+                        <li>31372</li>
+                        <li class="blast">163893</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 24.88%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">93</span>Redmi Note 5 Pro<span class="memory"> (4+64) </span></li>
+                        <li>72036</li>
+                        <li>25600</li>
+                        <li>31542</li>
+                        <li>31544</li>
+                        <li class="blast">160726</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 24.31%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">94</span>OPPO A5 2020<span class="memory"> (3+64) </span></li>
+                        <li>68353</li>
+                        <li>25318</li>
+                        <li>33308</li>
+                        <li>30097</li>
+                        <li class="blast">157083</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 23.47%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">95</span>Redmi Note 5 AI Dual Cam<span class="memory"> (4+64) </span></li>
+                        <li>66627</li>
+                        <li>24877</li>
+                        <li>30369</li>
+                        <li>29733</li>
+                        <li class="blast">151612</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 22.84%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">96</span>Redmi Note 6 Pro<span class="memory"> (4+64) </span></li>
+                        <li>63155</li>
+                        <li>24221</li>
+                        <li>31117</li>
+                        <li>29059</li>
+                        <li class="blast">147559</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 19.18%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">97</span>Redmi 7<span class="memory"> (3+32) </span></li>
+                        <li>61060</li>
+                        <li>10479</li>
+                        <li>26459</li>
+                        <li>25915</li>
+                        <li class="blast">123919</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 17.08%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">98</span>HUAWEI P20 Lite<span class="memory"> (4+64) </span></li>
+                        <li>46168</li>
+                        <li>10264</li>
+                        <li>29407</li>
+                        <li>24528</li>
+                        <li class="blast">110374</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 16.9%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">99</span>Galaxy A10<span class="memory"> (2+32) </span></li>
+                        <li>44408</li>
+                        <li>16883</li>
+                        <li>26436</li>
+                        <li>21455</li>
+                        <li class="blast">109189</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 15.93%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">100</span>Galaxy A5 2017<span class="memory"> (3+32) </span></li>
+                        <li>39140</li>
+                        <li>18919</li>
+                        <li>23517</li>
+                        <li>21309</li>
+                        <li class="blast">102890</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 15.86%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">101</span>Redmi Note 4<span class="memory"> (4+64) </span></li>
+                        <li>42875</li>
+                        <li>11688</li>
+                        <li>28959</li>
+                        <li>18916</li>
+                        <li class="blast">102446</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 15.69%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">102</span>Redmi 8<span class="memory"> (4+64) </span></li>
+                        <li>41561</li>
+                        <li>10488</li>
+                        <li>32255</li>
+                        <li>17048</li>
+                        <li class="blast">101360</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 15.32%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">103</span>Redmi 5 Plus<span class="memory"> (4+64) </span></li>
+                        <li>42113</li>
+                        <li>11236</li>
+                        <li>27266</li>
+                        <li>18357</li>
+                        <li class="blast">98978</li>
+                    </div>
+                </ul><ul class="list-unstyled newrank-b">
+                                            <div class="nrank-a" style="width: 14.09%;"></div>                    <div class="nrank-b">
+                        <li class="bfirst"><span class="numrank numall link">104</span>Redmi 8A<span class="memory"> (2+32) </span></li>
+                        <li>40238</li>
+                        <li>9267</li>
+                        <li>27303</li>
+                        <li>14198</li>
+                        <li class="blast">91013</li>
+                    </div>
+                </ul>    <!--<table width="100%" class="rank_tb">  -->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<td width="260" class="rank_head rank_big">Device</td>-->
+            <!---->
+            <!--<td width="150" class="rank_head rank_big">RAM+Storage</td>            -->
+            <!--<td width="80" class="rank_head rank_big">-->
+            <!--<div class="rank_div_center">-->
+            <!--<a href="/en/ranking/rank2.htm" style="color: #067fc0;">CPU</a>-->
+            <!--</div> -->
+            <!--<div class="rank_sort">            -->
+            <!--<a href="/en/ranking/rank2.htm"><div class="rank_sort_down"></div></a>-->
+            <!--</div>-->
+            <!--</td>          -->
+            <!--<td width="80" class="rank_head rank_big">-->
+            <!--<div class="rank_div_center">-->
+            <!--<a href="/en/ranking/rank4.htm" style="color: #067fc0;">UX</a>-->
+            <!--</div>-->
+            <!--<div class="rank_sort">            -->
+            <!--<a href="/en/ranking/rank4.htm"><div class="rank_sort_down"></div></a>-->
+            <!--</div>-->
+            <!--</td>-->
+            <!--<td width="80" class="rank_head rank_big">-->
+            <!--<div class="rank_div_center">-->
+            <!--<a href="/en/ranking/rank6.htm" style="color: #067fc0;">3D</a>-->
+            <!--</div>-->
+            <!--<div class="rank_sort">            -->
+            <!--<a href="/en/ranking/rank6.htm"><div class="rank_sort_down"></div></a>-->
+            <!--</div>-->
+            <!--</td>-->
+            <!--<td width="150" class="rank_head rank_big">-->
+            <!--<div class="rank_div_center">-->
+            <!--<a href="/en/ranking/rank1.htm" style="color: #067fc0;"><b>Total Score</b></a>-->
+            <!--</div>-->
+            <!--<div class="rank_sort">            -->
+            <!--<a href="/en/ranking/rank1.htm"><div class="rank_sort_up"></div></a>-->
+            <!--</div>-->
+            <!--</td>               -->
+          <!--</tr>-->
+        <!--</thead>             -->
+          <!--<tbody>-->
+          <!---->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div  class="num1 link">1</div><div class="rank_left">ROG Phone 3</div></td>-->
+         <!--<td class="rank_grey">12GB+128GB</td>-->
+         <!--<td class="rank_grey">181444</td>-->
+          <!--<td class="rank_grey">99798</td>-->
+          <!--<td class="rank_grey">234643</td>-->
+          <!--<td>615289</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div  class="num2 link">2</div><div class="rank_left">OnePlus 8 Pro</div></td>-->
+         <!--<td class="rank_grey">12GB+256GB</td>-->
+         <!--<td class="rank_grey">177662</td>-->
+          <!--<td class="rank_grey">89883</td>-->
+          <!--<td class="rank_grey">243108</td>-->
+          <!--<td>610567</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div  class="num3 link">3</div><div class="rank_left">OPPO Find X2 Pro</div></td>-->
+         <!--<td class="rank_grey">12GB+512GB</td>-->
+         <!--<td class="rank_grey">183310</td>-->
+          <!--<td class="rank_grey">91393</td>-->
+          <!--<td class="rank_grey">217945</td>-->
+          <!--<td>601910</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">4</div><div class="rank_left">Galaxy Note20 Ultra 5G (865+)</div></td>-->
+         <!--<td class="rank_grey">12GB+256GB</td>-->
+         <!--<td class="rank_grey">169085</td>-->
+          <!--<td class="rank_grey">90047</td>-->
+          <!--<td class="rank_grey">238878</td>-->
+          <!--<td>595317</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">5</div><div class="rank_left">Redmi K30 Pro</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">184173</td>-->
+          <!--<td class="rank_grey">84987</td>-->
+          <!--<td class="rank_grey">219765</td>-->
+          <!--<td>590078</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">6</div><div class="rank_left">Poco F2 Pro</div></td>-->
+         <!--<td class="rank_grey">8GB+256GB</td>-->
+         <!--<td class="rank_grey">180070</td>-->
+          <!--<td class="rank_grey">78343</td>-->
+          <!--<td class="rank_grey">214787</td>-->
+          <!--<td>570624</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">7</div><div class="rank_left">Mi 10</div></td>-->
+         <!--<td class="rank_grey">8GB+256GB</td>-->
+         <!--<td class="rank_grey">177372</td>-->
+          <!--<td class="rank_grey">83403</td>-->
+          <!--<td class="rank_grey">214804</td>-->
+          <!--<td>563116</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">8</div><div class="rank_left">Galaxy Note20 Ultra 5G (990)</div></td>-->
+         <!--<td class="rank_grey">12GB+256GB</td>-->
+         <!--<td class="rank_grey">150213</td>-->
+          <!--<td class="rank_grey">79090</td>-->
+          <!--<td class="rank_grey">211317</td>-->
+          <!--<td>527353</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">9</div><div class="rank_left">Galaxy S20 Ultra 5G (990)</div></td>-->
+         <!--<td class="rank_grey">12GB+128GB</td>-->
+         <!--<td class="rank_grey">154169</td>-->
+          <!--<td class="rank_grey">74780</td>-->
+          <!--<td class="rank_grey">215022</td>-->
+          <!--<td>516553</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">10</div><div class="rank_left">Galaxy S20+ 5G (990)</div></td>-->
+         <!--<td class="rank_grey">12GB+128GB</td>-->
+         <!--<td class="rank_grey">151670</td>-->
+          <!--<td class="rank_grey">75643</td>-->
+          <!--<td class="rank_grey">215138</td>-->
+          <!--<td>515501</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">11</div><div class="rank_left">Galaxy S20 5G (990)</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">149456</td>-->
+          <!--<td class="rank_grey">73190</td>-->
+          <!--<td class="rank_grey">205518</td>-->
+          <!--<td>500329</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">12</div><div class="rank_left">realme X3</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">138642</td>-->
+          <!--<td class="rank_grey">77040</td>-->
+          <!--<td class="rank_grey">186225</td>-->
+          <!--<td>487383</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">13</div><div class="rank_left">realme X2 Pro</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">139966</td>-->
+          <!--<td class="rank_grey">80135</td>-->
+          <!--<td class="rank_grey">191543</td>-->
+          <!--<td>484549</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">14</div><div class="rank_left">ROG Phone 2</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">141618</td>-->
+          <!--<td class="rank_grey">76959</td>-->
+          <!--<td class="rank_grey">191760</td>-->
+          <!--<td>482096</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">15</div><div class="rank_left">HUAWEI P40 Pro 5G</div></td>-->
+         <!--<td class="rank_grey">8GB+256GB</td>-->
+         <!--<td class="rank_grey">143527</td>-->
+          <!--<td class="rank_grey">72462</td>-->
+          <!--<td class="rank_grey">167698</td>-->
+          <!--<td>481676</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">16</div><div class="rank_left">OnePlus 7 Pro</div></td>-->
+         <!--<td class="rank_grey">8GB+256GB</td>-->
+         <!--<td class="rank_grey">140720</td>-->
+          <!--<td class="rank_grey">73464</td>-->
+          <!--<td class="rank_grey">177160</td>-->
+          <!--<td>471142</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">17</div><div class="rank_left">Galaxy S10 Lite</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">137494</td>-->
+          <!--<td class="rank_grey">70846</td>-->
+          <!--<td class="rank_grey">176010</td>-->
+          <!--<td>461961</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">18</div><div class="rank_left">Galaxy Note10+ (9825)</div></td>-->
+         <!--<td class="rank_grey">12GB+256GB</td>-->
+         <!--<td class="rank_grey">128440</td>-->
+          <!--<td class="rank_grey">65016</td>-->
+          <!--<td class="rank_grey">171661</td>-->
+          <!--<td>451647</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">19</div><div class="rank_left">Mi 9</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">136360</td>-->
+          <!--<td class="rank_grey">67348</td>-->
+          <!--<td class="rank_grey">177386</td>-->
+          <!--<td>444363</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">20</div><div class="rank_left">Galaxy Note10 (9825)</div></td>-->
+         <!--<td class="rank_grey">8GB+256GB</td>-->
+         <!--<td class="rank_grey">127188</td>-->
+          <!--<td class="rank_grey">63486</td>-->
+          <!--<td class="rank_grey">169320</td>-->
+          <!--<td>442783</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">21</div><div class="rank_left">Mi 9T Pro</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">134994</td>-->
+          <!--<td class="rank_grey">66193</td>-->
+          <!--<td class="rank_grey">172072</td>-->
+          <!--<td>431864</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">22</div><div class="rank_left">Redmi K20 Pro</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">131708</td>-->
+          <!--<td class="rank_grey">65267</td>-->
+          <!--<td class="rank_grey">170503</td>-->
+          <!--<td>425197</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">23</div><div class="rank_left">Galaxy S10+ (9820)</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">123853</td>-->
+          <!--<td class="rank_grey">63544</td>-->
+          <!--<td class="rank_grey">166673</td>-->
+          <!--<td>413007</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">24</div><div class="rank_left">Galaxy S10e (9820)</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">121179</td>-->
+          <!--<td class="rank_grey">63424</td>-->
+          <!--<td class="rank_grey">165119</td>-->
+          <!--<td>408697</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">25</div><div class="rank_left">Galaxy S10 (9820)</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">121301</td>-->
+          <!--<td class="rank_grey">63249</td>-->
+          <!--<td class="rank_grey">164947</td>-->
+          <!--<td>408478</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">26</div><div class="rank_left">HONOR 20 Pro</div></td>-->
+         <!--<td class="rank_grey">8GB+256GB</td>-->
+         <!--<td class="rank_grey">130516</td>-->
+          <!--<td class="rank_grey">64754</td>-->
+          <!--<td class="rank_grey">135424</td>-->
+          <!--<td>407358</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">27</div><div class="rank_left">LG V50 ThinQ 5G</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">123380</td>-->
+          <!--<td class="rank_grey">63544</td>-->
+          <!--<td class="rank_grey">164949</td>-->
+          <!--<td>405961</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">28</div><div class="rank_left">HUAWEI P30 Pro</div></td>-->
+         <!--<td class="rank_grey">8GB+256GB</td>-->
+         <!--<td class="rank_grey">129338</td>-->
+          <!--<td class="rank_grey">64063</td>-->
+          <!--<td class="rank_grey">137682</td>-->
+          <!--<td>402760</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">29</div><div class="rank_left">HUAWEI nova 7</div></td>-->
+         <!--<td class="rank_grey">8GB+256GB</td>-->
+         <!--<td class="rank_grey">131717</td>-->
+          <!--<td class="rank_grey">64479</td>-->
+          <!--<td class="rank_grey">130665</td>-->
+          <!--<td>401220</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">30</div><div class="rank_left">HONOR 20</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">131551</td>-->
+          <!--<td class="rank_grey">65185</td>-->
+          <!--<td class="rank_grey">135364</td>-->
+          <!--<td>400754</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">31</div><div class="rank_left">HUAWEI nova 5T</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">130790</td>-->
+          <!--<td class="rank_grey">64737</td>-->
+          <!--<td class="rank_grey">134301</td>-->
+          <!--<td>399026</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">32</div><div class="rank_left">HUAWEI P30</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">127928</td>-->
+          <!--<td class="rank_grey">64640</td>-->
+          <!--<td class="rank_grey">136927</td>-->
+          <!--<td>398476</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">33</div><div class="rank_left">HUAWEI Mate 20 Pro</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">126909</td>-->
+          <!--<td class="rank_grey">64237</td>-->
+          <!--<td class="rank_grey">131215</td>-->
+          <!--<td>387770</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">34</div><div class="rank_left">POCOPHONE F1</div></td>-->
+         <!--<td class="rank_grey">6GB+64GB</td>-->
+         <!--<td class="rank_grey">99796</td>-->
+          <!--<td class="rank_grey">56849</td>-->
+          <!--<td class="rank_grey">146569</td>-->
+          <!--<td>354851</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">35</div><div class="rank_left">Mi 8</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">102280</td>-->
+          <!--<td class="rank_grey">57047</td>-->
+          <!--<td class="rank_grey">144119</td>-->
+          <!--<td>352474</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">36</div><div class="rank_left">Galaxy Note 9 (845)</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">99337</td>-->
+          <!--<td class="rank_grey">56587</td>-->
+          <!--<td class="rank_grey">147456</td>-->
+          <!--<td>351468</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">37</div><div class="rank_left">Mi MIX 2S</div></td>-->
+         <!--<td class="rank_grey">6GB+64GB</td>-->
+         <!--<td class="rank_grey">102329</td>-->
+          <!--<td class="rank_grey">57065</td>-->
+          <!--<td class="rank_grey">140886</td>-->
+          <!--<td>348530</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">38</div><div class="rank_left">Galaxy Note 10 Lite</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">106770</td>-->
+          <!--<td class="rank_grey">50401</td>-->
+          <!--<td class="rank_grey">117526</td>-->
+          <!--<td>331265</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">39</div><div class="rank_left">OnePlus Nord</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">104055</td>-->
+          <!--<td class="rank_grey">64364</td>-->
+          <!--<td class="rank_grey">93760</td>-->
+          <!--<td>326958</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">40</div><div class="rank_left">Galaxy S9+ (9810)</div></td>-->
+         <!--<td class="rank_grey">6GB+64GB</td>-->
+         <!--<td class="rank_grey">102904</td>-->
+          <!--<td class="rank_grey">48396</td>-->
+          <!--<td class="rank_grey">119196</td>-->
+          <!--<td>316957</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">41</div><div class="rank_left">Galaxy Note 9 (9810)</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">101987</td>-->
+          <!--<td class="rank_grey">48541</td>-->
+          <!--<td class="rank_grey">118140</td>-->
+          <!--<td>316596</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">42</div><div class="rank_left">Redmi K30 5G</div></td>-->
+         <!--<td class="rank_grey">6GB+64GB</td>-->
+         <!--<td class="rank_grey">102103</td>-->
+          <!--<td class="rank_grey">63918</td>-->
+          <!--<td class="rank_grey">92700</td>-->
+          <!--<td>313951</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">43</div><div class="rank_left">HUAWEI nova 7i</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">96633</td>-->
+          <!--<td class="rank_grey">58087</td>-->
+          <!--<td class="rank_grey">86883</td>-->
+          <!--<td>309731</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">44</div><div class="rank_left">LG G7 ThinQ</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">93760</td>-->
+          <!--<td class="rank_grey">52561</td>-->
+          <!--<td class="rank_grey">103007</td>-->
+          <!--<td>293592</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">45</div><div class="rank_left">realme 6</div></td>-->
+         <!--<td class="rank_grey">4GB+128GB</td>-->
+         <!--<td class="rank_grey">95437</td>-->
+          <!--<td class="rank_grey">54297</td>-->
+          <!--<td class="rank_grey">77673</td>-->
+          <!--<td>288300</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">46</div><div class="rank_left">Redmi Note 8 Pro</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">94692</td>-->
+          <!--<td class="rank_grey">53973</td>-->
+          <!--<td class="rank_grey">80958</td>-->
+          <!--<td>288072</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">47</div><div class="rank_left">realme 6 Pro</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">102997</td>-->
+          <!--<td class="rank_grey">56796</td>-->
+          <!--<td class="rank_grey">70695</td>-->
+          <!--<td>283795</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">48</div><div class="rank_left">Galaxy S9 (9810)</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">103146</td>-->
+          <!--<td class="rank_grey">47142</td>-->
+          <!--<td class="rank_grey">85021</td>-->
+          <!--<td>282559</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">49</div><div class="rank_left">Redmi Note 9 Pro</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">101863</td>-->
+          <!--<td class="rank_grey">53702</td>-->
+          <!--<td class="rank_grey">71608</td>-->
+          <!--<td>279685</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">50</div><div class="rank_left">Redmi Note 9S</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">101451</td>-->
+          <!--<td class="rank_grey">53666</td>-->
+          <!--<td class="rank_grey">71515</td>-->
+          <!--<td>278758</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">51</div><div class="rank_left">OPPO Reno4 4G</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">98532</td>-->
+          <!--<td class="rank_grey">54096</td>-->
+          <!--<td class="rank_grey">72692</td>-->
+          <!--<td>277016</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">52</div><div class="rank_left">Mi Note 10 Pro</div></td>-->
+         <!--<td class="rank_grey">8GB+256GB</td>-->
+         <!--<td class="rank_grey">97086</td>-->
+          <!--<td class="rank_grey">52578</td>-->
+          <!--<td class="rank_grey">71435</td>-->
+          <!--<td>275048</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">53</div><div class="rank_left">Mi Note 10 Lite</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">96325</td>-->
+          <!--<td class="rank_grey">52026</td>-->
+          <!--<td class="rank_grey">71282</td>-->
+          <!--<td>270288</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">54</div><div class="rank_left">Mi Note 10</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">96125</td>-->
+          <!--<td class="rank_grey">51570</td>-->
+          <!--<td class="rank_grey">71055</td>-->
+          <!--<td>268155</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">55</div><div class="rank_left">Mi 9T</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">97445</td>-->
+          <!--<td class="rank_grey">51616</td>-->
+          <!--<td class="rank_grey">65064</td>-->
+          <!--<td>263337</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">56</div><div class="rank_left">Galaxy A71</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">91906</td>-->
+          <!--<td class="rank_grey">49877</td>-->
+          <!--<td class="rank_grey">71623</td>-->
+          <!--<td>262692</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">57</div><div class="rank_left">HUAWEI P20 Pro</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">77100</td>-->
+          <!--<td class="rank_grey">44505</td>-->
+          <!--<td class="rank_grey">82433</td>-->
+          <!--<td>260500</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">58</div><div class="rank_left">Galaxy Note 8 (8895)</div></td>-->
+         <!--<td class="rank_grey">6GB+64GB</td>-->
+         <!--<td class="rank_grey">75513</td>-->
+          <!--<td class="rank_grey">40923</td>-->
+          <!--<td class="rank_grey">91065</td>-->
+          <!--<td>250449</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">59</div><div class="rank_left">HUAWEI Mate 10 Pro</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">71809</td>-->
+          <!--<td class="rank_grey">42766</td>-->
+          <!--<td class="rank_grey">69071</td>-->
+          <!--<td>237095</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">60</div><div class="rank_left">realme XT</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">78943</td>-->
+          <!--<td class="rank_grey">46264</td>-->
+          <!--<td class="rank_grey">62389</td>-->
+          <!--<td>234077</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">61</div><div class="rank_left">realme Q</div></td>-->
+         <!--<td class="rank_grey">8GB+128GB</td>-->
+         <!--<td class="rank_grey">78931</td>-->
+          <!--<td class="rank_grey">46115</td>-->
+          <!--<td class="rank_grey">62002</td>-->
+          <!--<td>233367</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">62</div><div class="rank_left">Galaxy S8 (8895)</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">77494</td>-->
+          <!--<td class="rank_grey">40125</td>-->
+          <!--<td class="rank_grey">71290</td>-->
+          <!--<td>232362</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">63</div><div class="rank_left">Sony Xperia XZ1</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">74412</td>-->
+          <!--<td class="rank_grey">43860</td>-->
+          <!--<td class="rank_grey">66793</td>-->
+          <!--<td>227316</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">64</div><div class="rank_left">HONOR 10</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">74912</td>-->
+          <!--<td class="rank_grey">43401</td>-->
+          <!--<td class="rank_grey">53631</td>-->
+          <!--<td>227106</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">65</div><div class="rank_left">Galaxy S8+ (8895)</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">75006</td>-->
+          <!--<td class="rank_grey">39536</td>-->
+          <!--<td class="rank_grey">70889</td>-->
+          <!--<td>226918</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">66</div><div class="rank_left">Google Pixel 2 XL</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">78257</td>-->
+          <!--<td class="rank_grey">41954</td>-->
+          <!--<td class="rank_grey">68033</td>-->
+          <!--<td>226185</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">67</div><div class="rank_left">HONOR Play</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">75514</td>-->
+          <!--<td class="rank_grey">42324</td>-->
+          <!--<td class="rank_grey">51504</td>-->
+          <!--<td>224102</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">68</div><div class="rank_left">Galaxy A70</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">89095</td>-->
+          <!--<td class="rank_grey">48273</td>-->
+          <!--<td class="rank_grey">35855</td>-->
+          <!--<td>217547</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">69</div><div class="rank_left">Mi 9 Lite</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">72260</td>-->
+          <!--<td class="rank_grey">42021</td>-->
+          <!--<td class="rank_grey">54455</td>-->
+          <!--<td>214475</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">70</div><div class="rank_left">Redmi Note 7 Pro</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">88926</td>-->
+          <!--<td class="rank_grey">46264</td>-->
+          <!--<td class="rank_grey">37626</td>-->
+          <!--<td>213167</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">71</div><div class="rank_left">realme X Lite</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">75819</td>-->
+          <!--<td class="rank_grey">43361</td>-->
+          <!--<td class="rank_grey">55240</td>-->
+          <!--<td>212975</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">72</div><div class="rank_left">Redmi 10X 4G</div></td>-->
+         <!--<td class="rank_grey">4GB+128GB</td>-->
+         <!--<td class="rank_grey">72313</td>-->
+          <!--<td class="rank_grey">41014</td>-->
+          <!--<td class="rank_grey">40840</td>-->
+          <!--<td>201001</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">73</div><div class="rank_left">Redmi 9</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">73427</td>-->
+          <!--<td class="rank_grey">41494</td>-->
+          <!--<td class="rank_grey">40838</td>-->
+          <!--<td>197973</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">74</div><div class="rank_left">Galaxy A51</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">60241</td>-->
+          <!--<td class="rank_grey">37896</td>-->
+          <!--<td class="rank_grey">47345</td>-->
+          <!--<td>192131</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">75</div><div class="rank_left">Galaxy M31</div></td>-->
+         <!--<td class="rank_grey">6GB+128GB</td>-->
+         <!--<td class="rank_grey">58905</td>-->
+          <!--<td class="rank_grey">37498</td>-->
+          <!--<td class="rank_grey">47721</td>-->
+          <!--<td>191532</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">76</div><div class="rank_left">Galaxy S7 (8890)</div></td>-->
+         <!--<td class="rank_grey">4GB+32GB</td>-->
+         <!--<td class="rank_grey">66903</td>-->
+          <!--<td class="rank_grey">38313</td>-->
+          <!--<td class="rank_grey">45066</td>-->
+          <!--<td>186956</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">77</div><div class="rank_left">Redmi Note 9</div></td>-->
+         <!--<td class="rank_grey">4GB+128GB</td>-->
+         <!--<td class="rank_grey">64391</td>-->
+          <!--<td class="rank_grey">36269</td>-->
+          <!--<td class="rank_grey">41298</td>-->
+          <!--<td>181681</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">78</div><div class="rank_left">Galaxy S7 Edge (8890)</div></td>-->
+         <!--<td class="rank_grey">4GB+32GB</td>-->
+         <!--<td class="rank_grey">65327</td>-->
+          <!--<td class="rank_grey">37435</td>-->
+          <!--<td class="rank_grey">43946</td>-->
+          <!--<td>181060</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">79</div><div class="rank_left">Mi 8 Lite</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">74500</td>-->
+          <!--<td class="rank_grey">33713</td>-->
+          <!--<td class="rank_grey">36800</td>-->
+          <!--<td>180397</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">80</div><div class="rank_left">Redmi Note 7</div></td>-->
+         <!--<td class="rank_grey">4GB+128GB</td>-->
+         <!--<td class="rank_grey">71501</td>-->
+          <!--<td class="rank_grey">33660</td>-->
+          <!--<td class="rank_grey">35908</td>-->
+          <!--<td>178095</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">81</div><div class="rank_left">Galaxy M21</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">58902</td>-->
+          <!--<td class="rank_grey">37640</td>-->
+          <!--<td class="rank_grey">38416</td>-->
+          <!--<td>177844</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">82</div><div class="rank_left">Mi A3</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">70801</td>-->
+          <!--<td class="rank_grey">32516</td>-->
+          <!--<td class="rank_grey">31470</td>-->
+          <!--<td>176875</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">83</div><div class="rank_left">HONOR 9X</div></td>-->
+         <!--<td class="rank_grey">4GB+128GB</td>-->
+         <!--<td class="rank_grey">68780</td>-->
+          <!--<td class="rank_grey">37328</td>-->
+          <!--<td class="rank_grey">24780</td>-->
+          <!--<td>175596</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">84</div><div class="rank_left">Redmi Note 8</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">71025</td>-->
+          <!--<td class="rank_grey">33930</td>-->
+          <!--<td class="rank_grey">32173</td>-->
+          <!--<td>174071</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">85</div><div class="rank_left">Redmi Note 8T</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">70898</td>-->
+          <!--<td class="rank_grey">34314</td>-->
+          <!--<td class="rank_grey">31573</td>-->
+          <!--<td>173457</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">86</div><div class="rank_left">Vsmart Active 3</div></td>-->
+         <!--<td class="rank_grey">6GB+64GB</td>-->
+         <!--<td class="rank_grey">68223</td>-->
+          <!--<td class="rank_grey">36593</td>-->
+          <!--<td class="rank_grey">31710</td>-->
+          <!--<td>173236</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">87</div><div class="rank_left">realme 5i</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">70417</td>-->
+          <!--<td class="rank_grey">31347</td>-->
+          <!--<td class="rank_grey">33990</td>-->
+          <!--<td>171661</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">88</div><div class="rank_left">Mi A2</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">67201</td>-->
+          <!--<td class="rank_grey">34670</td>-->
+          <!--<td class="rank_grey">36032</td>-->
+          <!--<td>169475</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">89</div><div class="rank_left">HONOR 8X</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">69542</td>-->
+          <!--<td class="rank_grey">37340</td>-->
+          <!--<td class="rank_grey">24916</td>-->
+          <!--<td>166994</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">90</div><div class="rank_left">HONOR 10i</div></td>-->
+         <!--<td class="rank_grey">4GB+128GB</td>-->
+         <!--<td class="rank_grey">66920</td>-->
+          <!--<td class="rank_grey">37475</td>-->
+          <!--<td class="rank_grey">25018</td>-->
+          <!--<td>166666</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">91</div><div class="rank_left">Galaxy A50</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">58695</td>-->
+          <!--<td class="rank_grey">37410</td>-->
+          <!--<td class="rank_grey">36007</td>-->
+          <!--<td>166226</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">92</div><div class="rank_left">realme 5</div></td>-->
+         <!--<td class="rank_grey">3GB+64GB</td>-->
+         <!--<td class="rank_grey">70743</td>-->
+          <!--<td class="rank_grey">31372</td>-->
+          <!--<td class="rank_grey">25795</td>-->
+          <!--<td>163893</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">93</div><div class="rank_left">Redmi Note 5 Pro</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">72036</td>-->
+          <!--<td class="rank_grey">31544</td>-->
+          <!--<td class="rank_grey">25600</td>-->
+          <!--<td>160726</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">94</div><div class="rank_left">OPPO A5 2020</div></td>-->
+         <!--<td class="rank_grey">3GB+64GB</td>-->
+         <!--<td class="rank_grey">68353</td>-->
+          <!--<td class="rank_grey">30097</td>-->
+          <!--<td class="rank_grey">25318</td>-->
+          <!--<td>157083</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">95</div><div class="rank_left">Redmi Note 5 AI Dual Cam</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">66627</td>-->
+          <!--<td class="rank_grey">29733</td>-->
+          <!--<td class="rank_grey">24877</td>-->
+          <!--<td>151612</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">96</div><div class="rank_left">Redmi Note 6 Pro</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">63155</td>-->
+          <!--<td class="rank_grey">29059</td>-->
+          <!--<td class="rank_grey">24221</td>-->
+          <!--<td>147559</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">97</div><div class="rank_left">Redmi 7</div></td>-->
+         <!--<td class="rank_grey">3GB+32GB</td>-->
+         <!--<td class="rank_grey">61060</td>-->
+          <!--<td class="rank_grey">25915</td>-->
+          <!--<td class="rank_grey">10479</td>-->
+          <!--<td>123919</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">98</div><div class="rank_left">HUAWEI P20 Lite</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">46168</td>-->
+          <!--<td class="rank_grey">24528</td>-->
+          <!--<td class="rank_grey">10264</td>-->
+          <!--<td>110374</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">99</div><div class="rank_left">Galaxy A10</div></td>-->
+         <!--<td class="rank_grey">2GB+32GB</td>-->
+         <!--<td class="rank_grey">44408</td>-->
+          <!--<td class="rank_grey">21455</td>-->
+          <!--<td class="rank_grey">16883</td>-->
+          <!--<td>109189</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">100</div><div class="rank_left">Galaxy A5 2017</div></td>-->
+         <!--<td class="rank_grey">3GB+32GB</td>-->
+         <!--<td class="rank_grey">39140</td>-->
+          <!--<td class="rank_grey">21309</td>-->
+          <!--<td class="rank_grey">18919</td>-->
+          <!--<td>102890</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">101</div><div class="rank_left">Redmi Note 4</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">42875</td>-->
+          <!--<td class="rank_grey">18916</td>-->
+          <!--<td class="rank_grey">11688</td>-->
+          <!--<td>102446</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">102</div><div class="rank_left">Redmi 8</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">41561</td>-->
+          <!--<td class="rank_grey">17048</td>-->
+          <!--<td class="rank_grey">10488</td>-->
+          <!--<td>101360</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">103</div><div class="rank_left">Redmi 5 Plus</div></td>-->
+         <!--<td class="rank_grey">4GB+64GB</td>-->
+         <!--<td class="rank_grey">42113</td>-->
+          <!--<td class="rank_grey">18357</td>-->
+          <!--<td class="rank_grey">11236</td>-->
+          <!--<td>98978</td>-->
+          <!--</tr>-->
+           <!---->
+            <!--<tr>-->
+         <!--<td><div style="margin-top: 2px;" class="numall link">104</div><div class="rank_left">Redmi 8A</div></td>-->
+         <!--<td class="rank_grey">2GB+32GB</td>-->
+         <!--<td class="rank_grey">40238</td>-->
+          <!--<td class="rank_grey">14198</td>-->
+          <!--<td class="rank_grey">9267</td>-->
+          <!--<td>91013</td>-->
+          <!--</tr>-->
+           <!--                           -->
+        <!--</tbody>-->
+      <!--</table>-->
+          <br>
+
+          <div style="color: #999999;width: 915px;">
+          <span >*&nbsp;1 AnTuTu was developed based on the unique technologies of different platforms, such like Vulkan(Android) and Metal(iOS). cross-platform products may not be directly comparable.&nbsp;&nbsp;</span><br>
+          *&nbsp;2 The above list, only the popular models will be displayed, monthly update.&nbsp;&nbsp; <br>
+          *&nbsp;3 The score displayed is the average of all data for that device, not the highest score for that device.<br>
+          *&nbsp;4 The list is global data but does not include the Chinese market, for more information about Chinese market, please visit our Chinese website.
+          </div>
+
+
+        </div>
+
+        <div class="m_r fr" style="padding-right: 10px;">
+            <!--<div class="media mt"><a href="#"><img src="updateimages/ad.jpg" width="300" height="100" /></a></div>-->
+            <div class="main_t mt2">
+                <h2>Ranking Reports</h2>
+            </div>
+            <div class="vido_box">
+                <ul>
+                    <li>
+                            <div class="fl vidoimg">
+                                <a target="_blank" href="/en/doc/122963.htm">
+                                    <img src="http://img.antutu.com/20200908/1599559764.3975.png" onerror="this.src='/static/images/nopic.png'" width="120" height="90" /></a>
+                            </div>
+                            <div class="fl vidotext">
+                                <div class="vidotitle"><a target="_blank" href="/en/doc/122963.htm">Global Top 10 Best Performing iOS Devices in August 2020</a></div>
+                                <div class="vidotime">2020-09-08</div>
+                            </div>
+                            <div class="cl"></div>
+                        </li><li>
+                            <div class="fl vidoimg">
+                                <a target="_blank" href="/en/doc/122959.htm">
+                                    <img src="http://img.antutu.com/20200908/1599558996.3188.png" onerror="this.src='/static/images/nopic.png'" width="120" height="90" /></a>
+                            </div>
+                            <div class="fl vidotext">
+                                <div class="vidotitle"><a target="_blank" href="/en/doc/122959.htm">Global Top 10 Best Performing Flagship Phones and Mid-range Phones, August 2020</a></div>
+                                <div class="vidotime">2020-09-08</div>
+                            </div>
+                            <div class="cl"></div>
+                        </li><li>
+                            <div class="fl vidoimg">
+                                <a target="_blank" href="/en/doc/122680.htm">
+                                    <img src="http://img.antutu.com/20200812/1597235536.0952.png" onerror="this.src='/static/images/nopic.png'" width="120" height="90" /></a>
+                            </div>
+                            <div class="fl vidotext">
+                                <div class="vidotitle"><a target="_blank" href="/en/doc/122680.htm">Global Top 10 Best Performing iOS Devices in July 2020</a></div>
+                                <div class="vidotime">2020-08-12</div>
+                            </div>
+                            <div class="cl"></div>
+                        </li><li>
+                            <div class="fl vidoimg">
+                                <a target="_blank" href="/en/doc/122625.htm">
+                                    <img src="http://img.antutu.com/20200807/1596803857.0374.png" onerror="this.src='/static/images/nopic.png'" width="120" height="90" /></a>
+                            </div>
+                            <div class="fl vidotext">
+                                <div class="vidotitle"><a target="_blank" href="/en/doc/122625.htm">Global Best Performing Android Phones in July 2020: MediaTek Enters the List</a></div>
+                                <div class="vidotime">2020-08-07</div>
+                            </div>
+                            <div class="cl"></div>
+                        </li><li>
+                            <div class="fl vidoimg">
+                                <a target="_blank" href="/en/doc/122456.htm">
+                                    <img src="http://img.antutu.com/20200724/1595588105.7716.png" onerror="this.src='/static/images/nopic.png'" width="120" height="90" /></a>
+                            </div>
+                            <div class="fl vidotext">
+                                <div class="vidotitle"><a target="_blank" href="/en/doc/122456.htm">Global Mobile Phone Users Preferences, Q2 2020</a></div>
+                                <div class="vidotime">2020-07-24</div>
+                            </div>
+                            <div class="cl"></div>
+                        </li><li>
+                            <div class="fl vidoimg">
+                                <a target="_blank" href="/en/doc/122248.htm">
+                                    <img src="http://img.antutu.com/20200707/1594122979.0517.png" onerror="this.src='/static/images/nopic.png'" width="120" height="90" /></a>
+                            </div>
+                            <div class="fl vidotext">
+                                <div class="vidotitle"><a target="_blank" href="/en/doc/122248.htm">Global Top 10 Best Performing iOS Devices, June 2020</a></div>
+                                <div class="vidotime">2020-07-07</div>
+                            </div>
+                            <div class="cl"></div>
+                        </li><li>
+                            <div class="fl vidoimg">
+                                <a target="_blank" href="/en/doc/122247.htm">
+                                    <img src="http://img.antutu.com/20200707/1594122005.0583.png" onerror="this.src='/static/images/nopic.png'" width="120" height="90" /></a>
+                            </div>
+                            <div class="fl vidotext">
+                                <div class="vidotitle"><a target="_blank" href="/en/doc/122247.htm">Global Top 10 Best Performing Android Phones, June 2020</a></div>
+                                <div class="vidotime">2020-07-07</div>
+                            </div>
+                            <div class="cl"></div>
+                        </li>                </ul>
+                <a href="/en/class_100036/index.htm"><div class="morevido">More</div></a>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+    <footer class="footer">
+
+        <div class="mainbor" style="background: #fcfcfc; width: 100%; border: 0; padding: 10px 0;margin-top: 50px;">
+            <div class="foot">
+                <p>Copyright© 2020 www.antutu.com</p>
+                <p>AnTuTu Hong Kong, Email: marketing@antutu.com</p>
+                <p><a href="/en/privacy.htm" style="color:#999999;">Privacy Policy</a></p>
+                <div class="follow">
+                    <div id="top_share"></div>
+                    <div class="cl"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?070d96517e55a605615ae8c3be1a2bea";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129521330-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129521330-1');
+    </script>
+    <script>
+        var _pkg = location.search.split('=')[1] || '';
+        var devIcon = $('#deviceIcon');
+        var devTips = $('#deviceTip');
+        devIcon.mouseenter(function(){
+            if ( !devTips.hasClass('active') ) {
+                devTips.fadeIn(200).addClass('active');
+            }
+        });
+        devIcon.mouseleave(function(){
+            devTips.fadeOut(200).removeClass('active');
+        });
+
+        function sendData( devType, devId ) {
+            if (!devId) return;
+            $.ajax({
+                url: '/en/opt_out_device',
+                type: 'POST',
+                data: {
+                    'type': devType,
+                    'device_id': devId,
+                    'pkg': _pkg
+                },
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                timeout: 3000,
+                success: function( data ) {
+                    $("#processResult").fadeIn(100);
+                    setTimeout(function(){
+                        $("#processResult").fadeOut(100);
+                    }, 2000);
+                },
+                error: function( err ) {}
+            });
+        };
+
+        $('#submit').click(function(){
+            var _type = $('#deviceType').val();
+            var _id = $('#imei').val();
+            sendData( _type, _id );
+        });
+
+    </script>
+</body>
+</html>

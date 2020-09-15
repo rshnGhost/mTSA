@@ -18,6 +18,9 @@ class Search:
             #soup = BeautifulSoup(open("C:\\Users\\user\\Desktop\\autoProject\\mTSA-master\\ios.html","r",encoding='utf-8'), "html.parser")
         soup = BeautifulSoup(r.content, 'html.parser')
         soup.prettify()
+        content = soup.find('div', attrs={"style":"float: right;color: #999999;margin-top: 30px;margin-right: 35px;"})
+        self.month = re.sub("\*","",str(content.text))
+        #print(re.sub("\*","",str(content.text)))
         content = soup.findAll('ul', attrs = {'class':'newrank-b'})
         for content in content:
             #print(content)
