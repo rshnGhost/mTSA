@@ -194,6 +194,10 @@ class Command(BaseCommand):
                 try:
                     #mname = re.sub(" ","",str(name))
                     #pWebObject
+                    #import re
+                    price = finalData.get('Misc').get('Price')
+                    price = price.split('.')[0]
+                    price = re.sub("\$ ","",str(price))
                     pDObject = phoneData.objects.create(
                     	name  = finalData.get('name'),
                     	#link = finalData.get('link'),
@@ -208,7 +212,7 @@ class Command(BaseCommand):
                     	gpu = finalData.get('Platform').get('GPU'),
                     	dimension = finalData.get('Display').get('Size'),
                     	battery = finalData.get('Battery').get('Option'),##
-                    	price = 1000,#finalData.get('Misc').get('Price'),
+                    	price = price*73.61,#finalData.get('Misc').get('Price'),
                         picture = mname+"/"+mname+"[0].jpg"#"OnePlus8Pro/OnePlus8Pro[1].jpg"
                     )
                     pDObject.save()
