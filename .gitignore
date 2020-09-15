@@ -8,6 +8,11 @@ __pycache__/
 *.pyc
 *.py[cod]
 
+#
+Files/mediaFile/*
+!Files/mediaFile/default/.nomedia.txt
+!Files/mediaFile/.nomedia.txt
+
 # C extensions
 *.so
 
