@@ -201,13 +201,13 @@ class Command(BaseCommand):
                     	network = finalData.get('Network').get('Technology'),
                     	launch = finalData.get('Launch').get('Announced'),
                     	body = finalData.get('Body').get('Dimensions'),
-                    	display = finalData.get('Tests').get('Display'),
+                    	display = finalData.get('Display').get('Size'),##
                     	platform = finalData.get('Platform').get('OS'),
                     	memory = finalData.get('Memory').get('Internal'),
                     	camera = finalData.get('Tests').get('Camera'),
                     	gpu = finalData.get('Platform').get('GPU'),
                     	dimension = finalData.get('Display').get('Size'),
-                    	battery = finalData.get('Battery').get('Charging'),
+                    	battery = finalData.get('Battery').get('Option'),##
                     	price = 1000,#finalData.get('Misc').get('Price'),
                         picture = mname+"/"+mname+"[0].jpg"#"OnePlus8Pro/OnePlus8Pro[1].jpg"
                     )
