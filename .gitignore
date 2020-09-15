@@ -13,6 +13,9 @@ Files/mediaFile/*
 !Files/mediaFile/default/.nomedia.txt
 !Files/mediaFile/.nomedia.txt
 
+Files/staticFile/*
+!Files/staticFile/.nomedia.txt
+
 # C extensions
 *.so
 
