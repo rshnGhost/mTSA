@@ -3,7 +3,7 @@ git pull https://github.com/rshnGhost/mTSA.git
 git remote add origin https://github.com/rshnGhost/mTSA.git
 git status
 git add .
-git commit - m "messgae"
+git commit -m "messgae"
 git push origin master
 
 python src\manage.py dumpdata --indent=4 > dumped_data.json
