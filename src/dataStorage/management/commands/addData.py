@@ -107,12 +107,12 @@ class Command(BaseCommand):
             if pWebObject.count() == 0:
                 try:
                     finalData = processWData(object.name)
+                    finalData = (finalData.dataWP)
+                    name  = finalData.get('name')
+                    #print(finalData)
                 except:
                     print("error[processWData]")
                     pass
-                finalData = (finalData.dataWP)
-                name  = finalData.get('name')
-                #print(finalData)
                 try:
                     pWObject = phoneWeb.objects.create(
                     	name  = finalData.get('name'),
@@ -208,7 +208,7 @@ class Command(BaseCommand):
                     	display = finalData.get('Display').get('Size'),##
                     	platform = finalData.get('Platform').get('OS'),
                     	memory = finalData.get('Memory').get('Internal'),
-                    	camera = finalData.get('Tests').get('Camera'),
+                    	camera = finalData.get('Tests').get('Camera'),###
                     	gpu = finalData.get('Platform').get('GPU'),
                     	dimension = finalData.get('Display').get('Size'),
                     	battery = finalData.get('Battery').get('Option'),##
