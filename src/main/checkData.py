@@ -101,7 +101,7 @@ class Search:
 		#for ilink in finalData.get('image').values():
 		#    print(ilink)
 
-		#print(finalData)
+		print(finalData)
 		self.dataWP = finalData
 
 def processWData(name):
