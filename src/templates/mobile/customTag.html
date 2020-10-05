@@ -13,29 +13,47 @@ Analysis of Tweet | {{ data.name }} | {{ block.super }}
 		</form>
 	</div>
 	<div class="list">
-		<div class="row"><div class="col-lg-6">Positive: </div><div class="col-lg-6">{{ data.pt }}</div></div>
+		<div class="row">
+			<div class="col-lg-5">Positive: </div>
+			<div class="col-lg-5">{{ data.pt }} </div>
+			<button class="btn btn-outline-success" data-toggle="collapse" data-target="#pTweet">&#65291;</button>
+		</div>
 		<main role="main" class="container">
+		<div class="collapse" id="pTweet">
 			{% for pt in dataPt %}
 			<div class="alert alert-success">
 				<div class="row"><div class="col">{{ pt.text }}</div></div>
 			</div>
 			{% endfor %}
+		</div>
 		</main>
-		<div class="row"><div class="col-lg-6">Negative: </div><div class="col-lg-6">{{ data.nt }}</div></div>
+		<div class="row">
+			<div class="col-lg-5">Negative: </div>
+			<div class="col-lg-5">{{ data.nt }}</div>
+			<button class="btn btn-outline-danger" data-toggle="collapse" data-target="#nTweet">&#65291;</button>
+		</div>
 		<main role="main" class="container">
+		<div class="collapse" id="nTweet">
 			{% for nt in dataNt %}
 			<div class="alert alert-danger">
 				<div class="row"><div class="col">{{ nt.text }}</div></div>
 			</div>
 			{% endfor %}
+		</div>
 		</main>
-		<div class="row"><div class="col-lg-6">Neutral: </div><div class="col-lg-6">{{ data.nnt }}</div></div>
+		<div class="row">
+			<div class="col-lg-5">Neutral: </div>
+			<div class="col-lg-5">{{ data.nnt }}</div>
+			<button class="btn btn-outline-info" data-toggle="collapse" data-target="#neTweet">&#65291;</button>
+		</div>
 		<main role="main" class="container">
+		<div class="collapse" id="neTweet">
 			{% for pt in dataNnt %}
 			<div class="alert alert-info">
 				<div class="row"><div class="col">{{ pt.text }}</div></div>
 			</div>
 			{% endfor %}
-		</main>
+		</div>
+	</main>
 </div>
 {% endblock %}

@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}' type="text/css"/>
 		<link rel="stylesheet" href='{% static "css/all.css" %}' type="text/css"/>
 		<link rel="stylesheet" href='{% static "css/slide.css" %}' type="text/css"/>
+		<link rel="stylesheet" href='{% static "css/animate.css" %}' type="text/css"/>
 		<link rel="shortcut icon" href="{% static 'images/favicon.ico' type='image/x-icon' %}">
 		<style>
       .bd-placeholder-img {
@@ -31,42 +32,36 @@
 		<script type="text/javascript" src='{% static "js/bootstrap.min.js" %}'></script>
 		<script type="text/javascript" src='{% static "javascript/slider.js" %}'></script>
 		<script type="text/javascript" src='{% static "javascript/show.js" %}'></script>
+		<script type="text/javascript" src='{% static "javascript/bootstrap-notify.js" %}'></script>
+		{% if messages %}
+		<script>
+			$(document).ready(function() {
+				{% for message in messages %}
+					$.notify('{{ message }}',
+						{
+							type: '{{ message.tags }}',
+							placement: {
+								from: "top",
+								align: "right"
+							},
+							delay: 500,
+							animate: {
+								enter: "animate__animated animate__flipInX",
+								exit: "animate__animated animate__flipOutX"
+							},
+						});
+				{% endfor %}
+			});
+		</script>
+		{% endif %}
 		<title>{% block title %}mTSA{% endblock title %}</title>
 	</head>
 	<body id="body" {% block bodyTag %}{% endblock bodyTag %}>
 		{% block javascriptEnd %}{% endblock javascriptEnd %}
-		{% if not "/epaper/" in request.get_full_path %}
 			{% include 'navbar.html' %}
-		{% endif %}
     <main role="main" class="container">
-			{% if messages %}
-			<script>
-    $(document).ready(function() {
-        // messages timeout for 10 sec
-        setTimeout(function() {
-            $('.messages').fadeOut('slow');
-        }, 5000); // <-- time in milliseconds, 1000 =  1 sec
-
-        // delete message
-        $('.del-msg').live('click',function(){
-            $('.del-msg').parent().attr('style', 'display:none;');
-        })
-    });
-			</script>
-				{% for message in messages %}
-				<div class="alert alert-{{ message.tags }} alert-dismissible fade show messages">
-				<span{% if message.tags %} class="{{ message.tags }}"{% endif %}>
-						{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
-						{{ message }}<br/>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-				</span>
-				</div>
-				{% endfor %}
-		{% endif %}
 			{% block content %}{% endblock content %}
 		</main>
-		{% if not "/ePaper/" in request.get_full_path %}
 		<footer class="text-muted">
 			<div class="container">
 				<div class="row">
@@ -77,6 +72,5 @@
 				</div>
 			</div>
 		</footer>
-		{% endif %}
 	</body>
 </html>
